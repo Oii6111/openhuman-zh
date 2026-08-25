@@ -1,0 +1,34 @@
+OpenHuman 中文社区版 (openhuman-zh)
+===================================
+
+This distribution is a modified version of OpenHuman, an open-source project
+originally developed by tinyhumansai and the OpenHuman Contributors:
+
+    Copyright (C) 2026 tinyhumansai
+    OpenHuman Contributors
+
+Upstream repository: https://github.com/tinyhumansai/openhuman
+This repository:     https://github.com/Oii6111/openhuman-zh
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version. See the LICENSE file for the full license text.
+
+Modifications made in this distribution include, but are not limited to:
+
+- Chinese-language (Simplified Chinese) user-interface translations and
+  refinements for the desktop app and onboarding flows.
+- Localized project documentation (see docs/README.zh-CN.md).
+- Upstream tracking and integration of changes made for the Chinese
+  community edition.
+
+All upstream copyright notices and license texts remain intact. Any changes
+to upstream code are distributed under the GPL-3.0 license.
+
+---
+
+本发行版是 OpenHuman（由 tinyhumansai 与 OpenHuman Contributors 开发）的修改版本，
+在 GNU GPL-3.0 许可下分发。上游版权归 tinyhumansai 所有；本仓库在保留上游版权
+声明的前提下，增加了简体中文界面翻译、本地化文档及面向中文社区的功能适配。
+详细许可条款见 LICENSE 文件。
