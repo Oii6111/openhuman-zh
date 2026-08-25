@@ -177,10 +177,10 @@ _向着 AGI 和人工意识前行？给仓库加颗星，帮更多人找到这�
  </a>
 </p>
 
-# 贡献者名人堂
+# 上游致谢
 
-贡献一份力量，就有机会进入名人堂。贡献者可获得免费周边，以及我们 [Discord](https://discord.tinyhumans.ai/) 的专属访问权限。
+本项目基于 [tinyhumansai/openhuman](https://github.com/tinyhumansai/openhuman) 二次开发。以下为上游项目的贡献者名单，感谢他们的工作：
 
 <a href="https://github.com/tinyhumansai/openhuman/graphs/contributors">
- <img src="https://contrib.rocks/image?repo=tinyhumansai/openhuman" alt="OpenHuman contributors" />
+ <img src="https://contrib.rocks/image?repo=tinyhumansai/openhuman" alt="OpenHuman 上游贡献者" />
 </a>

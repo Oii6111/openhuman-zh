@@ -4,6 +4,10 @@
 </p>
 
 <p align="center">
+ <strong>维护者：<a href="https://github.com/Oii6111">@Oii6111</a></strong> ｜ 欢迎 issue、PR 与反馈
+</p>
+
+<p align="center">
  <img src="https://img.shields.io/badge/status-early%20beta-orange" alt="早期测试版" />
  <a href="./LICENSE"><img src="https://img.shields.io/github/license/tinyhumansai/openhuman" alt="许可证" /></a>
 </p>
