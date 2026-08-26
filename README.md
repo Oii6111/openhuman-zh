@@ -51,7 +51,8 @@ cd openhuman-zh
 git submodule update --init --recursive
 pnpm install
 pnpm dev          # 纯 Web UI 开发
-pnpm dev:app      # 完整 Tauri 桌面开发
+pnpm dev:app      # 完整 Tauri 桌面开发（MacOS）
+pnpm dev:app:win  # 完整 Tauri 桌面开发（windows）
 ```
 
 构建环境要求：Git、Node.js 24+、pnpm 10.10.0、Rust 1.93.0（`rustfmt` + `clippy`）、CMake、Ninja、ripgrep，以及各平台桌面构建所需的前置依赖。
