@@ -120,7 +120,7 @@ pub(crate) async fn build_memory_context(
     // never block the channel reply path. Bound the wait and skip on timeout.
     const MEMORY_CONTEXT_RECALL_TIMEOUT: std::time::Duration =
         std::time::Duration::from_millis(1000);
-    let mut entries = match tokio::time::timeout(
+    let entries = match tokio::time::timeout(
         MEMORY_CONTEXT_RECALL_TIMEOUT,
         mem.recall(
             user_msg,
