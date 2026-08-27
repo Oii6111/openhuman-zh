@@ -1874,6 +1874,12 @@ pub(crate) fn create_local_chat_model_from_string(
 /// construction-time chokepoint can never diverge on what "session active"
 /// means.
 pub(crate) fn verify_session_active(config: &Config) -> anyhow::Result<()> {
+    // Local/offline installs (hosting not enabled) may use custom/local
+    // providers without an OpenHuman backend session.
+    if !config.hosting.enabled {
+        return Ok(());
+    }
+
     // Fast path: the scheduler gate already knows the session is dead.
     if crate::openhuman::cron::scheduler_gate::is_signed_out() {
         anyhow::bail!(

@@ -25,6 +25,7 @@ use crate::openhuman::channels::signal::SignalChannel;
 use crate::openhuman::channels::slack::SlackChannel;
 use crate::openhuman::channels::telegram::TelegramChannel;
 use crate::openhuman::channels::traits;
+use crate::openhuman::channels::wechat::WeChatChannel;
 use crate::openhuman::channels::whatsapp::WhatsAppChannel;
 #[cfg(feature = "whatsapp-web")]
 use crate::openhuman::channels::whatsapp_web::WhatsAppWebChannel;
@@ -621,6 +622,13 @@ pub async fn start_channels(mut config: Config) -> Result<()> {
             qq.app_secret.clone(),
             qq.allowed_users.clone(),
             crate::openhuman::config::build_runtime_proxy_client("channel.qq"),
+        )));
+    }
+
+    if let Some(ref wx) = config.channels_config.wechat {
+        channels.push(Arc::new(WeChatChannel::with_http_client_from_config(
+            wx.clone(),
+            crate::openhuman::config::build_runtime_proxy_client("channel.wechat"),
         )));
     }
 

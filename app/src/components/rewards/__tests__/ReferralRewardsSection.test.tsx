@@ -70,8 +70,8 @@ describe('ReferralRewardsSection', () => {
 
     await waitFor(() => {
       expect(share).toHaveBeenCalledWith({
-        title: 'OpenHuman',
-        text: expect.stringContaining(`Download OpenHuman: ${LATEST_APP_DOWNLOAD_URL}`),
+        title: '小鹈鹕',
+        text: expect.stringContaining(`Download 小鹈鹕: ${LATEST_APP_DOWNLOAD_URL}`),
       });
     });
     expect(share).not.toHaveBeenCalledWith(

@@ -17,7 +17,7 @@ export const STATUS_STYLES: Record<ChannelConnectionStatus, { label: string; cla
 
 /** Human-readable labels for auth modes. */
 export const AUTH_MODE_LABELS: Record<string, string> = {
-  managed_dm: 'Login with OpenHuman',
+  managed_dm: 'Login with 小鹈鹕',
   oauth: 'OAuth Sign-in',
   bot_token: 'Use your own Bot Token',
   api_key: 'Use your own API Key',
@@ -33,7 +33,7 @@ export const FALLBACK_DEFINITIONS: ChannelDefinition[] = [
     auth_modes: [
       {
         mode: 'managed_dm',
-        description: 'Message the OpenHuman Telegram bot directly.',
+        description: 'Message the 小鹈鹕 Telegram bot directly.',
         fields: [],
         auth_action: 'telegram_managed_dm',
       },
@@ -111,13 +111,13 @@ export const FALLBACK_DEFINITIONS: ChannelDefinition[] = [
       },
       {
         mode: 'oauth',
-        description: 'Install the OpenHuman bot to your Discord server via OAuth.',
+        description: 'Install the 小鹈鹕 bot to your Discord server via OAuth.',
         fields: [],
         auth_action: 'discord_oauth',
       },
       {
         mode: 'managed_dm',
-        description: 'Link your personal Discord account to the OpenHuman bot.',
+        description: 'Link your personal Discord account to the 小鹈鹕 bot.',
         fields: [],
         auth_action: 'discord_managed_link',
       },
@@ -256,6 +256,59 @@ export const FALLBACK_DEFINITIONS: ChannelDefinition[] = [
       },
     ],
     capabilities: ['send_text', 'receive_text'],
+  },
+  // WeChat (个人微信) via official iLink protocol. The UI has a dedicated
+  // QR-code login flow; the manual fields below match `wechat_definition()`.
+  {
+    id: 'wechat',
+    display_name: 'WeChat (个人微信)',
+    description: '通过腾讯官方 iLink 协议收发个人微信消息。',
+    icon: 'wechat',
+    auth_modes: [
+      {
+        mode: 'api_key',
+        description: '提供 iLink 扫码登录后获得的 bot token。',
+        fields: [
+          {
+            key: 'bot_token',
+            label: 'Bot Token',
+            field_type: 'secret',
+            required: true,
+            placeholder: 'iLink 登录后获取的 bot_token',
+          },
+          {
+            key: 'base_url',
+            label: 'API Base URL',
+            field_type: 'string',
+            required: false,
+            placeholder: 'https://ilinkai.weixin.qq.com',
+          },
+          {
+            key: 'cdn_base_url',
+            label: 'CDN Base URL',
+            field_type: 'string',
+            required: false,
+            placeholder: 'https://novac2c.cdn.weixin.qq.com/c2c',
+          },
+          {
+            key: 'allowed_users',
+            label: 'Allowed Users',
+            field_type: 'string',
+            required: false,
+            placeholder: 'Comma-separated WeChat user IDs; * to allow any',
+          },
+          {
+            key: 'default_user',
+            label: 'Default User (Proactive)',
+            field_type: 'string',
+            required: false,
+            placeholder: 'Optional user ID for proactive sends',
+          },
+        ],
+        auth_action: undefined,
+      },
+    ],
+    capabilities: ['send_text', 'receive_text', 'typing'],
   },
   // Native IMAP/SMTP email (#4280). Field keys map 1:1 to
   // `config::schema::channels::EmailConfig` and `email_definition()` in

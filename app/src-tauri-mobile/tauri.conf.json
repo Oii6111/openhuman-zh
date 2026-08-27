@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "OpenHuman",
+  "productName": "小鹈鹕",
   "version": "0.58.16",
   "identifier": "com.tinyhumansai.openhuman",
   "build": {
@@ -13,7 +13,7 @@
     "windows": [
       {
         "label": "main",
-        "title": "OpenHuman",
+        "title": "小鹈鹕",
         "width": 390,
         "height": 844,
         "decorations": true,

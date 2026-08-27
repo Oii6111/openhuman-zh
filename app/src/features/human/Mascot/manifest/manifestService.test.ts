@@ -14,7 +14,7 @@ import type { MascotManifest, MascotManifestEntry } from './types';
 const TINY: MascotManifestEntry = {
   id: 'tiny-mascot',
   name: 'Tiny Mascot',
-  description: 'Default OpenHuman mascot.',
+  description: 'Default 小鹈鹕 mascot.',
   status: 'ready',
   tags: ['default', 'openhuman'],
   stateEngine: {

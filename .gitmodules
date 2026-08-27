@@ -9,7 +9,7 @@
 	url = https://github.com/tinyhumansai/tinycortex
 [submodule "vendor/tinychannels"]
 	path = vendor/tinychannels
-	url = https://github.com/tinyhumansai/tinychannels
+	url = https://github.com/Oii6111/tinychannels.git
 [submodule "vendor/tinyplace"]
 	path = vendor/tinyplace
 	url = https://github.com/tinyhumansai/tiny.place.git

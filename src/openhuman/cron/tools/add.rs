@@ -22,6 +22,7 @@ fn allowed_users_for_channel<'a>(config: &'a Config, channel: &str) -> Option<&'
         "lark" => cc.lark.as_ref().map(|c| c.allowed_users.as_slice()),
         "dingtalk" => cc.dingtalk.as_ref().map(|c| c.allowed_users.as_slice()),
         "qq" => cc.qq.as_ref().map(|c| c.allowed_users.as_slice()),
+        "wechat" => cc.wechat.as_ref().map(|c| c.allowed_users.as_slice()),
         _ => None,
     }
 }
@@ -65,7 +66,10 @@ fn validate_delivery(config: &Config, delivery: &DeliveryConfig) -> Result<(), S
     match allowed_users_for_channel(config, channel) {
         Some([]) => Ok(()),
         Some(list) => {
-            if list.iter().any(|u| u == to) {
+            // `*` is the "any sender" wildcard used by the channel runtime
+            // (e.g. WeChat `allowed_users = ["*"]`), so it must also allow any
+            // cron announce target. Exact ids still work as before.
+            if list.iter().any(|u| u == "*" || u == to) {
                 Ok(())
             } else {
                 Err(format!(
@@ -661,6 +665,34 @@ mod tests {
             .unwrap();
 
         assert!(!result.is_error, "{:?}", result.output());
+    }
+
+    #[tokio::test]
+    async fn agent_job_announce_wildcard_allowed_users_allows_any_chat() {
+        // `allowed_users = ["*"]` is the common "any sender" config for open
+        // channels (WeChat uses this). It must be treated as a wildcard for
+        // cron announce targets too, not as a literal chat id.
+        let tmp = TempDir::new().unwrap();
+        let cfg = cfg_with_telegram(&tmp, vec!["*".into()]);
+        let tool = CronAddTool::new(cfg.clone(), test_security(&cfg));
+        let result = tool
+            .execute(json!({
+                "schedule": { "kind": "every", "every_ms": 300000 },
+                "job_type": "agent",
+                "prompt": "ping",
+                "delivery": {
+                    "mode": "announce",
+                    "channel": "telegram",
+                    "to": "any-user"
+                }
+            }))
+            .await
+            .unwrap();
+
+        assert!(!result.is_error, "{:?}", result.output());
+        let jobs = cron::list_jobs(&cfg).unwrap();
+        assert_eq!(jobs.len(), 1);
+        assert_eq!(jobs[0].delivery.to.as_deref(), Some("any-user"));
     }
 
     #[tokio::test]

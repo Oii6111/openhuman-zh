@@ -411,13 +411,13 @@ async fn start_core_process(
     state.inner().ensure_running().await?;
     if let Some(notice) = state.inner().take_last_port_fallback_notice() {
         let body = format!(
-            "OpenHuman is using port {} because {} was busy",
+            "小鹈鹕 is using port {} because {} was busy",
             notice.chosen_port, notice.preferred_port
         );
         if let Err(err) = app
             .notification()
             .builder()
-            .title("OpenHuman")
+            .title("小鹈鹕")
             .body(&body)
             .show()
         {
@@ -1553,7 +1553,7 @@ fn macos_app_menu(app: &AppHandle<AppRuntime>) -> tauri::Result<Menu<AppRuntime>
     let quit = MenuItem::with_id(
         app,
         APP_QUIT_MENU_ID,
-        "Quit OpenHuman",
+        "Quit 小鹈鹕",
         true,
         Some("CmdOrCtrl+Q"),
     )?;
@@ -1561,7 +1561,7 @@ fn macos_app_menu(app: &AppHandle<AppRuntime>) -> tauri::Result<Menu<AppRuntime>
     let app_sep_2 = PredefinedMenuItem::separator(app)?;
     let app_menu = Submenu::with_items(
         app,
-        "OpenHuman",
+        "小鹈鹕",
         true,
         &[
             &about,
@@ -1622,7 +1622,7 @@ fn setup_tray(app: &AppHandle<AppRuntime>) -> tauri::Result<()> {
     let show_item = MenuItem::with_id(
         app,
         "tray_show_window",
-        "Open OpenHuman",
+        "Open 小鹈鹕",
         true,
         None::<&str>,
     )?;

@@ -26,6 +26,22 @@ interface TelegramLoginStartResult {
   botUsername: string;
 }
 
+interface WeChatLoginStartResult {
+  sessionKey: string;
+  qrcodeUrl: string;
+  qrcode: string;
+}
+
+interface WeChatLoginCheckResult {
+  status: string;
+  qrcodeUrl?: string | null;
+  botToken?: string | null;
+  accountId?: string | null;
+  baseUrl?: string | null;
+  userId?: string | null;
+  message?: string | null;
+}
+
 interface DiscordLinkStartResult {
   linkToken: string;
   instructions: string;
@@ -195,6 +211,31 @@ export const channelConnectionsApi = {
       params: { linkToken },
     });
     return expectObject<TelegramLoginCheckResult>(result, 'Telegram login check');
+  },
+
+  /** Start an iLink QR-code login for WeChat and return the QR image/data URL. */
+  wechatLoginStart: async (): Promise<WeChatLoginStartResult> => {
+    const result = await callCoreRpc<unknown>({
+      method: 'openhuman.channels_wechat_login_start',
+      params: {},
+    });
+    return expectObject<WeChatLoginStartResult>(result, 'WeChat login start');
+  },
+
+  /** Poll the iLink QR login status; pass verifyCode when status is need_verifycode. */
+  wechatLoginCheck: async (
+    sessionKey: string,
+    verifyCode?: string
+  ): Promise<WeChatLoginCheckResult> => {
+    const params: Record<string, string> = { sessionKey };
+    if (verifyCode) {
+      params.verifyCode = verifyCode;
+    }
+    const result = await callCoreRpc<unknown>({
+      method: 'openhuman.channels_wechat_login_check',
+      params,
+    });
+    return expectObject<WeChatLoginCheckResult>(result, 'WeChat login check');
   },
 
   /** Initiate Discord managed link — creates a link token the user pastes into Discord as `!start <token>`. */

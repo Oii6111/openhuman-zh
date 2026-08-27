@@ -51,7 +51,7 @@ function ComposerTextBridge({
 }
 
 /**
- * The assistant-ui `Thread`, projected from OpenHuman's Redux transcript.
+ * The assistant-ui `Thread`, projected from 小鹈鹕's Redux transcript.
  *
  * The runtime is a read-only projection; Redux and the core remain authoritative
  * for messages, streaming and persistence. Composer sends are forwarded through

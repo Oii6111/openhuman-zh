@@ -12,6 +12,7 @@ pub mod qq;
 pub mod signal;
 pub mod slack;
 pub mod telegram;
+pub mod wechat;
 pub mod whatsapp;
 #[cfg(feature = "whatsapp-web")]
 pub mod whatsapp_web;

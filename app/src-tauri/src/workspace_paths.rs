@@ -71,7 +71,12 @@ pub async fn resolve_workspace_absolute_path(path: String) -> Result<String, Str
         "[workspace-paths] resolve_workspace_absolute_path: {}",
         workspace_label
     );
-    Ok(target.to_string_lossy().into_owned())
+    // Rust's `fs::canonicalize` returns `\\?\`-prefixed verbatim paths on
+    // Windows. Those are fine for filesystem APIs but not for `obsidian://`
+    // deep links, which compare against the normal paths stored in Obsidian's
+    // obsidian.json. `dunce::simplified` strips the verbatim prefix while
+    // keeping the canonicalized target.
+    Ok(dunce::simplified(&target).to_string_lossy().into_owned())
 }
 
 async fn active_workspace_root() -> Result<PathBuf, String> {

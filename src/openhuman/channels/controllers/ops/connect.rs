@@ -5,7 +5,9 @@ use serde_json::{json, Value};
 use crate::openhuman::channels::email_channel::{EmailChannel, EmailConfig};
 use crate::openhuman::channels::providers::yuanbao::YuanbaoConfig;
 use crate::openhuman::channels::traits::Channel;
-use crate::openhuman::config::{Config, DiscordConfig, IMessageConfig, TelegramConfig};
+use crate::openhuman::config::{
+    Config, DiscordConfig, IMessageConfig, TelegramConfig, WeChatConfig,
+};
 use crate::openhuman::security::credentials;
 use crate::rpc::RpcOutcome;
 use tinymemory_api::chunks::SourceKind;
@@ -544,6 +546,46 @@ pub async fn connect_channel(
             "internal error: email config not built before persistence".to_string()
         })?;
         persist_email_config(config, email_cfg).await?;
+    } else if channel_id == "wechat" && auth_mode == ChannelAuthMode::ApiKey {
+        let bot_token = require_cred_str(creds_map, "bot_token")?;
+        let mut persisted = config.clone();
+        let existing = persisted.channels_config.wechat.as_ref();
+        let base_url = optional_cred_str(creds_map, "base_url").unwrap_or_else(|| {
+            existing
+                .map(|c| c.base_url.clone())
+                .unwrap_or_else(|| "https://ilinkai.weixin.qq.com".to_string())
+        });
+        let cdn_base_url = optional_cred_str(creds_map, "cdn_base_url").unwrap_or_else(|| {
+            existing
+                .map(|c| c.cdn_base_url.clone())
+                .unwrap_or_else(|| "https://novac2c.cdn.weixin.qq.com/c2c".to_string())
+        });
+        let allowed_users = match creds_map.get("allowed_users") {
+            Some(raw) => parse_allowed_users(Some(raw)),
+            None => existing
+                .map(|cfg| cfg.allowed_users.clone())
+                .unwrap_or_default(),
+        };
+        let default_user = optional_cred_str(creds_map, "default_user")
+            .or_else(|| existing.and_then(|c| c.default_user.clone()));
+
+        persisted.channels_config.wechat = Some(WeChatConfig {
+            bot_token,
+            base_url,
+            cdn_base_url,
+            allowed_users,
+            default_user,
+        });
+
+        persisted
+            .save()
+            .await
+            .map_err(|e| format!("failed to persist wechat config.toml: {e}"))?;
+
+        tracing::info!(
+            target: "openhuman::channels",
+            "[wechat] connect_channel: wrote channels_config.wechat; restart core for iLink long-poll listener"
+        );
     }
 
     Ok(RpcOutcome::single_log(
@@ -637,6 +679,18 @@ pub async fn disconnect_channel(
             tracing::info!(
                 target: "openhuman::channels",
                 "[email] disconnect_channel: cleared channels_config.email"
+            );
+        }
+    } else if channel_id == "wechat" && auth_mode == ChannelAuthMode::ApiKey {
+        let mut persisted = config.clone();
+        if persisted.channels_config.wechat.take().is_some() {
+            persisted
+                .save()
+                .await
+                .map_err(|e| format!("failed to clear wechat config.toml: {e}"))?;
+            tracing::info!(
+                target: "openhuman::channels",
+                "[wechat] disconnect_channel: cleared channels_config.wechat"
             );
         }
     }
@@ -833,6 +887,9 @@ pub async fn connected_channel_slugs(config: &Config) -> Result<Vec<String>, Str
     }
     if cc.qq.is_some() {
         slugs.insert("qq".to_string());
+    }
+    if cc.wechat.is_some() {
+        slugs.insert("wechat".to_string());
     }
 
     // Layer 2: managed-DM / OAuth channels stored only as credentials

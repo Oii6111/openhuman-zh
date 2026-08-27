@@ -3,9 +3,9 @@ import { describe, expect, it } from 'vitest';
 import { parsePersonaFields } from './personaSections';
 import { applyTemplate, PERSONA_TEMPLATES } from './personaTemplates';
 
-const SOUL = `# OpenHuman
+const SOUL = `# 小鹈鹕
 
-You are OpenHuman.
+You are 小鹈鹕.
 
 ## Personality
 

@@ -634,12 +634,24 @@ impl Agent {
         &mut self,
     ) -> Vec<crate::openhuman::memory::agent::memory_loader::MemoryCitation> {
         if let Some(handle) = self.pending_citations.take() {
-            match handle.await {
-                Ok(citations) => self.last_turn_citations = citations,
+            // Citations are UI-only decoration; they must never delay the actual
+            // reply. In practice the recall finishes before the model turn does,
+            // but a hung recall backend would otherwise wedge every channel reply
+            // until the whole turn times out.
+            const CITATION_COLLECTION_TIMEOUT: std::time::Duration =
+                std::time::Duration::from_millis(500);
+            let abort_handle = handle.abort_handle();
+            match tokio::time::timeout(CITATION_COLLECTION_TIMEOUT, handle).await {
+                Ok(Ok(citations)) => self.last_turn_citations = citations,
                 // A panicked or aborted collection must not fail the turn — the
                 // citations are decorative, the reply is not.
-                Err(err) => {
+                Ok(Err(err)) => {
                     log::warn!("[agent_loop] citation task did not complete: {err}");
+                    self.last_turn_citations.clear();
+                }
+                Err(_) => {
+                    log::warn!("[agent_loop] citation task timed out; skipping UI-only citations");
+                    abort_handle.abort();
                     self.last_turn_citations.clear();
                 }
             }

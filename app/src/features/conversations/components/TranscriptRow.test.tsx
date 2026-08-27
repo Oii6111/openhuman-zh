@@ -33,7 +33,7 @@ function renderRow(overrides: Partial<TranscriptRowProps> = {}) {
     isLatestVisible: false,
     isCopied: false,
     isReactionPickerOpen: false,
-    shareAgentName: 'OpenHuman',
+    shareAgentName: '小鹈鹕',
     onCopy: vi.fn(),
     onReact: vi.fn(),
     onOpenReactionPicker: vi.fn(),

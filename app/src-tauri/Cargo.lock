@@ -13,6 +13,7 @@ dependencies = [
  "chrono",
  "cpal",
  "directories 5.0.1",
+ "dunce",
  "futures-util",
  "hex",
  "log",

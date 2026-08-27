@@ -84,6 +84,8 @@ pub use providers::slack;
 #[cfg(feature = "channels")]
 pub use providers::telegram;
 #[cfg(feature = "channels")]
+pub use providers::wechat;
+#[cfg(feature = "channels")]
 pub use providers::whatsapp;
 #[cfg(feature = "whatsapp-web")]
 pub use providers::whatsapp_web;
@@ -114,6 +116,8 @@ pub use signal::SignalChannel;
 pub use slack::SlackChannel;
 #[cfg(feature = "channels")]
 pub use telegram::TelegramChannel;
+#[cfg(feature = "channels")]
+pub use wechat::WeChatChannel;
 #[cfg(feature = "channels")]
 pub use whatsapp::WhatsAppChannel;
 #[cfg(feature = "whatsapp-web")]

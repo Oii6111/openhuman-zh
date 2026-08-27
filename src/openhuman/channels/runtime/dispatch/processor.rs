@@ -270,17 +270,29 @@ pub(crate) async fn process_channel_runtime_message(
 
     if ctx.auto_save_memory {
         let autosave_key = conversation_memory_key(&msg);
-        let _ = ctx
-            .memory
-            .store(
+        // Best-effort autosave: never let a slow memory backend block the
+        // channel turn itself.
+        match tokio::time::timeout(
+            std::time::Duration::from_millis(1000),
+            ctx.memory.store(
                 crate::openhuman::agent::learning::transcript_ingest::CONVERSATION_RAW_NAMESPACE,
                 &autosave_key,
                 &msg.content,
                 tinymemory_api::types::MemoryCategory::Conversation,
                 None,
                 tinymemory_api::types::MemoryTaint::Internal,
-            )
-            .await;
+            ),
+        )
+        .await
+        {
+            Ok(Ok(())) => {}
+            Ok(Err(err)) => {
+                tracing::debug!("[channels] memory autosave failed: {err}");
+            }
+            Err(_) => {
+                tracing::warn!("[channels] memory autosave timed out; skipping");
+            }
+        }
     }
 
     let channel_context = build_channel_context_block(&msg);

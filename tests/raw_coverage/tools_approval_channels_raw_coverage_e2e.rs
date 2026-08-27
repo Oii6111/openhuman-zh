@@ -70,7 +70,7 @@ use openhuman_core::openhuman::channels::yuanbao::YuanbaoChannel;
 use openhuman_core::openhuman::channels::{
     doctor_channels, Channel, CliChannel, DingTalkChannel, EmailChannel, IMessageChannel,
     IrcChannel, LinqChannel, MattermostChannel, QQChannel, SendMessage, SignalChannel,
-    SlackChannel, WhatsAppChannel,
+    SlackChannel, WeChatChannel, WhatsAppChannel,
 };
 use openhuman_core::openhuman::integrations::composio::all_composio_agent_tools;
 use openhuman_core::openhuman::config::schema::{
@@ -2010,6 +2010,8 @@ async fn channel_provider_public_paths_cover_pre_network_errors_and_utilities() 
 
     let qq = QQChannel::new("app".into(), "secret".into(), vec!["*".into()]);
     assert_eq!(qq.name(), "qq");
+    let wechat = WeChatChannel::new("wechat-token".into(), vec!["*".into()]);
+    assert_eq!(wechat.name(), "wechat");
     let signal = SignalChannel::new(
         "http://127.0.0.1:1///".into(),
         "+15551234567".into(),

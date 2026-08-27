@@ -76,7 +76,7 @@ pub use channels::{
     AuditConfig, ChannelsConfig, DingTalkConfig, DiscordConfig, EmailConfig, IMessageConfig,
     IrcConfig, LarkConfig, LarkReceiveMode, LinqConfig, MatrixConfig, MattermostConfig, QQConfig,
     ResourceLimitsConfig, SandboxBackend, SandboxConfig, SecurityConfig, SignalConfig, SlackConfig,
-    StreamMode, TelegramConfig, WebhookConfig, WhatsAppConfig, YuanbaoConfig,
+    StreamMode, TelegramConfig, WeChatConfig, WebhookConfig, WhatsAppConfig, YuanbaoConfig,
 };
 pub(crate) use cli_overrides::set_cli_inference_overrides;
 pub use context::ContextConfig;

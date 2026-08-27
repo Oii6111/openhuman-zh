@@ -5,6 +5,7 @@ mod discord;
 mod messaging;
 mod telegram;
 mod types;
+mod wechat;
 mod yuanbao;
 
 // Re-export types needed by tests.
@@ -29,6 +30,7 @@ pub use messaging::{
     channel_update_thread,
 };
 pub use telegram::{telegram_login_check, telegram_login_start};
+pub use wechat::{wechat_login_check, wechat_login_start};
 
 #[cfg(test)]
 #[path = "../ops_tests.rs"]

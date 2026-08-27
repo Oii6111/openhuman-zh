@@ -34,7 +34,7 @@ describe('normalizeRewardsSnapshot', () => {
         {
           id: 'STREAK_7',
           title: '7-Day Streak',
-          description: 'Use OpenHuman on seven consecutive active days.',
+          description: 'Use 小鹈鹕 on seven consecutive active days.',
           actionLabel: 'Keep your streak alive for 7 days',
           unlocked: true,
           progressLabel: 'Unlocked',

@@ -1,6 +1,7 @@
 export type ChannelType =
   | 'telegram'
   | 'discord'
+  | 'wechat'
   | 'web'
   | 'lark'
   | 'dingtalk'
@@ -15,6 +16,7 @@ export type ChannelType =
 const KNOWN_CHANNEL_TYPES = [
   'telegram',
   'discord',
+  'wechat',
   'web',
   'lark',
   'dingtalk',

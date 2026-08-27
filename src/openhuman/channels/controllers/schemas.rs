@@ -81,6 +81,14 @@ struct DiscordLinkCheckParams {
 
 #[derive(Debug, Deserialize)]
 #[serde(rename_all = "camelCase")]
+struct WeChatLoginCheckParams {
+    session_key: String,
+    #[serde(default)]
+    verify_code: Option<String>,
+}
+
+#[derive(Debug, Deserialize)]
+#[serde(rename_all = "camelCase")]
 struct DiscordListChannelsParams {
     guild_id: String,
 }
@@ -181,6 +189,14 @@ pub fn all_registered_controllers() -> Vec<RegisteredController> {
         RegisteredController {
             schema: schemas("telegram_login_check"),
             handler: handle_telegram_login_check,
+        },
+        RegisteredController {
+            schema: schemas("wechat_login_start"),
+            handler: handle_wechat_login_start,
+        },
+        RegisteredController {
+            schema: schemas("wechat_login_check"),
+            handler: handle_wechat_login_check,
         },
         RegisteredController {
             schema: schemas("discord_link_start"),
@@ -389,6 +405,31 @@ fn handle_telegram_login_check(params: Map<String, Value>) -> ControllerFuture {
         let manager = openhuman_channel_manager(config);
         let result = manager
             .telegram_login_check(p.link_token.trim())
+            .await
+            .map_err(|e| e.to_string())?;
+        to_json(RpcOutcome::new(result, vec![]))
+    })
+}
+
+fn handle_wechat_login_start(_params: Map<String, Value>) -> ControllerFuture {
+    Box::pin(async move {
+        let config = config_rpc::load_config_with_timeout().await?;
+        let manager = openhuman_channel_manager(config);
+        let result = manager
+            .wechat_login_start()
+            .await
+            .map_err(|e| e.to_string())?;
+        to_json(RpcOutcome::new(result, vec![]))
+    })
+}
+
+fn handle_wechat_login_check(params: Map<String, Value>) -> ControllerFuture {
+    Box::pin(async move {
+        let config = config_rpc::load_config_with_timeout().await?;
+        let p = deserialize_params::<WeChatLoginCheckParams>(params)?;
+        let manager = openhuman_channel_manager(config);
+        let result = manager
+            .wechat_login_check(p.session_key.trim(), p.verify_code.as_deref())
             .await
             .map_err(|e| e.to_string())?;
         to_json(RpcOutcome::new(result, vec![]))

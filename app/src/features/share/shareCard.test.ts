@@ -43,7 +43,7 @@ describe('computeCardModel', () => {
 
   test('supplies defaults for empty headline / agent / stat', () => {
     const model = computeCardModel({ headline: '  ', agentName: '', brandUrl: '' });
-    expect(model.headlineLines.join(' ')).toContain('OpenHuman');
+    expect(model.headlineLines.join(' ')).toContain('小鹈鹕');
     expect(model.agentName).toBe('My agent');
     expect(model.stat).toBeNull();
   });
@@ -92,7 +92,7 @@ describe('paintShareCard', () => {
       brandUrl: 'tinyhumans.ai',
     });
     const joined = ctx.texts.join('\n');
-    expect(joined).toContain('OpenHuman');
+    expect(joined).toContain('小鹈鹕');
     expect(joined).toContain('Cleared my inbox');
     expect(joined).toContain('12s');
     expect(joined).toContain('Tiny');

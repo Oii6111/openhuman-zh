@@ -501,7 +501,7 @@ const Conversations = ({
   // Display name for share cards (#5006): the active agent profile, or the
   // product name when no named profile is selected.
   const shareAgentName =
-    agentProfiles.find(p => p.id === selectedAgentProfileId)?.name ?? 'OpenHuman';
+    agentProfiles.find(p => p.id === selectedAgentProfileId)?.name ?? '小鹈鹕';
 
   const textInputRef = useRef<HTMLTextAreaElement>(null);
   const composerFooterRef = useRef<HTMLDivElement>(null);

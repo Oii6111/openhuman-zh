@@ -116,17 +116,37 @@ pub(crate) async fn build_memory_context(
 ) -> String {
     let mut context = String::new();
 
-    if let Ok(entries) = mem
-        .recall(
+    // Memory context is best-effort decoration: a slow/hung recall backend must
+    // never block the channel reply path. Bound the wait and skip on timeout.
+    const MEMORY_CONTEXT_RECALL_TIMEOUT: std::time::Duration =
+        std::time::Duration::from_millis(1000);
+    let mut entries = match tokio::time::timeout(
+        MEMORY_CONTEXT_RECALL_TIMEOUT,
+        mem.recall(
             user_msg,
             5,
             &tinymemory_api::recall::OwnedRecallOpts::default(),
             // Unrestricted: a channel turn carries no ambient source scope, and
             // the guard narrows against its own allowlist regardless.
             None,
-        )
-        .await
+        ),
+    )
+    .await
     {
+        Ok(Ok(hits)) => hits,
+        Ok(Err(err)) => {
+            tracing::debug!("[channels] memory recall failed: {err}");
+            Vec::new()
+        }
+        Err(_) => {
+            tracing::warn!(
+                "[channels] memory recall timed out; skipping memory context for channel turn"
+            );
+            Vec::new()
+        }
+    };
+
+    if !entries.is_empty() {
         let mut included = 0usize;
         let mut used_chars = 0usize;
 

@@ -14,6 +14,7 @@ import { renderChannelIcon } from './channelIcon';
 import CredentialChannelConfig from './CredentialChannelConfig';
 import DiscordConfig from './DiscordConfig';
 import TelegramConfig from './TelegramConfig';
+import WeChatConfig from './WeChatConfig';
 import YuanbaoConfig from './YuanbaoConfig';
 
 interface ChannelSetupModalProps {
@@ -31,6 +32,8 @@ function renderChannelConfig(
       return <TelegramConfig definition={definition} />;
     case 'discord':
       return <DiscordConfig definition={definition} />;
+    case 'wechat':
+      return <WeChatConfig definition={definition} />;
     case 'yuanbao':
       return <YuanbaoConfig definition={definition} />;
     // Credential-form channels (Lark/DingTalk/Email) render the same generic

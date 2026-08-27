@@ -187,7 +187,7 @@ impl EventHandler<DomainEvent> for ConversationPersistenceSubscriber {
                         thread_ts: thread_ts.as_deref(),
                         tinychannels_session_key: None,
                         content: response,
-                        role: "assistant",
+                        role: "agent",
                         success: Some(*success),
                         elapsed_ms: Some(*elapsed_ms),
                         model_provider: Some(provider),
@@ -433,8 +433,8 @@ mod tests {
             messages[0].extra_metadata["tinychannelsSessionKey"],
             "main:slack:default:channel:T123:general:thread-1"
         );
-        assert_eq!(messages[1].id, "assistant:m1");
-        assert_eq!(messages[1].sender, "assistant");
+        assert_eq!(messages[1].id, "agent:m1");
+        assert_eq!(messages[1].sender, "agent");
         assert_eq!(messages[1].extra_metadata["elapsedMs"], 42);
         assert_eq!(messages[1].extra_metadata["success"], true);
         assert_eq!(messages[1].extra_metadata["modelProvider"], "test-provider");
@@ -636,7 +636,7 @@ mod tests {
         )
         .expect("messages");
         assert_eq!(messages.len(), 2);
-        assert_eq!(messages[1].id, "assistant:m1");
+        assert_eq!(messages[1].id, "agent:m1");
     }
 
     /// `ChannelMessageProcessed` with a mismatched workspace must not be appended,
@@ -760,7 +760,7 @@ mod tests {
 
         assert_eq!(messages.len(), 2, "only user + correct assistant turn");
         assert_eq!(messages[0].id, "user:m1");
-        assert_eq!(messages[1].id, "assistant:m1");
+        assert_eq!(messages[1].id, "agent:m1");
         assert_eq!(
             messages[1].content, "from workspace A — should persist",
             "workspace B response must not have been written"

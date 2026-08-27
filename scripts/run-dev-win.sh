@@ -550,7 +550,8 @@ fi
 
 export PATH="$PATH_PREFIX:$PATH"
 
-"$PNPM_EXE" tauri:ensure
+# `tauri:ensure` is not present in this checkout; the local @tauri-apps/cli
+# is used directly below. `core:stage` remains a no-op in this version.
 "$PNPM_EXE" core:stage
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -627,24 +628,17 @@ fi
 # `pnpm.exe` does not, so the script body `tauri "dev"` then fails with
 # "'tauri' is not recognized" inside cmd.
 #
-# `ensure-tauri-cli.sh` already installed the vendored CEF-aware
-# cargo-tauri at `$REPO_ROOT/.cache/cargo-install/bin/cargo-tauri.exe`,
-# so we can invoke that binary directly and skip the wrapper layer.
+# The local @tauri-apps/cli (`pnpm tauri`) is used below; the old
+# `ensure-tauri-cli.sh` / vendored `cargo-tauri.exe` path is not present
+# in this checkout.
 #
 # Historical note: a previous version of this script ran a PATH
 # deduplication loop (collapsing repeated entries that MSYS→Windows
 # conversion stacked during vcvars / Git-Bash re-runs / pnpm layering).
 # That loop was needed because the overflowing env block left child
 # processes with an EMPTY PATH — even `where.exe` was gone, causing
-# "'pnpm' is not recognized". Direct cargo-tauri.exe invocation with
-# absolute paths in the .bat wrapper makes the env block size irrelevant:
-# beforeDevCommand no longer needs PATH at all.
-CARGO_TAURI_EXE="$REPO_ROOT/.cache/cargo-install/bin/cargo-tauri.exe"
-if [[ ! -x "$CARGO_TAURI_EXE" ]]; then
-  echo "[run-dev-win] cargo-tauri.exe not found at $CARGO_TAURI_EXE" >&2
-  echo "[run-dev-win] tauri:ensure should have installed it. Aborting." >&2
-  exit 1
-fi
+# "'pnpm' is not recognized". The wrapper below keeps beforeDevCommand
+# independent of PATH, so the env block size no longer matters.
 
 # Build a tauri.conf.json `-c` JSON merge that:
 #  - pins `beforeDevCommand` to the absolute pnpm path so cargo-tauri's
@@ -711,4 +705,4 @@ fi
 CONFIG_OVERRIDE+="}}"
 
 echo "[run-dev-win] tauri config override: $CONFIG_OVERRIDE"
-"$CARGO_TAURI_EXE" dev -c "$CONFIG_OVERRIDE"
+"$NODE_EXE_UNIX" "$APP_DIR/node_modules/@tauri-apps/cli/tauri.js" dev -c "$CONFIG_OVERRIDE"

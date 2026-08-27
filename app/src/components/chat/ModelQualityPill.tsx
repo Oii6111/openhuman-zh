@@ -47,13 +47,13 @@ function selectionValue(selection: ProviderModelSelection): string | null {
 }
 
 function displayValue(value: string | null | undefined): string {
-  if (!value || value.startsWith('hint:')) return 'OpenHuman';
+  if (!value || value.startsWith('hint:')) return '小鹈鹕';
   const separator = value.indexOf(':');
   return separator >= 0 ? value.slice(separator + 1) : value;
 }
 
 /**
- * assistant-ui's compact model-selector trigger, backed by OpenHuman's shared
+ * assistant-ui's compact model-selector trigger, backed by 小鹈鹕's shared
  * provider/model picker so configured providers and their model discovery stay
  * consistent with routing.
  */

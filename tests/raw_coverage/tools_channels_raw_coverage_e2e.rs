@@ -397,7 +397,7 @@ fn channel_definitions_validate_all_auth_modes_and_controller_metadata() {
         .collect::<BTreeSet<_>>();
     assert_eq!(ids.len(), definitions.len(), "channel ids should be unique");
     for expected in [
-        "telegram", "discord", "web", "imessage", "lark", "dingtalk", "yuanbao",
+        "telegram", "discord", "web", "imessage", "lark", "dingtalk", "wechat", "yuanbao",
     ] {
         assert!(
             ids.contains(expected),

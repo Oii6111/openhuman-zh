@@ -72,14 +72,14 @@ export interface ModelRegistryEntry {
 
 export interface ModelSettingsUpdate {
   /**
-   * OpenHuman product backend URL. Almost always left untouched; the
+   * 小鹈鹕 product backend URL. Almost always left untouched; the
    * inference endpoint is the separate `inference_url` field.
    */
   api_url?: string | null;
   /**
    * Custom OpenAI-compatible LLM endpoint. When set together with
    * `api_key`, inference talks directly to this URL instead of routing
-   * through the OpenHuman backend. Send an empty string to clear.
+   * through the 小鹈鹕 backend. Send an empty string to clear.
    */
   inference_url?: string | null;
   api_key?: string | null;
@@ -88,7 +88,7 @@ export interface ModelSettingsUpdate {
   /**
    * When present, REPLACES `config.model_routes` wholesale with these
    * `(hint, model)` pairs. Send `[]` to clear all routes (used when switching
-   * back to the OpenHuman backend whose built-in router picks per-task models
+   * back to the 小鹈鹕 backend whose built-in router picks per-task models
    * on its own). Omit to leave existing routes untouched.
    */
   model_routes?: ModelRoute[] | null;
@@ -222,7 +222,7 @@ export async function openhumanGetConfig(): Promise<CommandResponse<ConfigSnapsh
  * `config.get_client_config` in `src/openhuman/config/schemas.rs`.
  */
 export interface ClientConfig {
-  /** OpenHuman product backend URL (auth/billing/voice). */
+  /** 小鹈鹕 product backend URL (auth/billing/voice). */
   api_url: string | null;
   /**
    * Custom OpenAI-compatible LLM endpoint. Legacy field, retained for
@@ -502,7 +502,7 @@ export async function openhumanGetAutonomySettings(): Promise<CommandResponse<Au
 /**
  * Agent filesystem roots returned by `config_get_agent_paths`. All three are
  * already-canonicalised path strings; the UI renders them verbatim instead of
- * hard-coding defaults like `~/OpenHuman/projects`.
+ * hard-coding defaults like `~/小鹈鹕/projects`.
  *
  * - `action_dir` — agent CWD for `shell` / `node_exec` / `npm_exec` / file
  *   writes. Defaults to `projects_dir`; overridable via `OPENHUMAN_ACTION_DIR`.
@@ -897,7 +897,7 @@ export async function aiGetConfig(): Promise<AIPreview> {
   return {
     soul: {
       raw: '',
-      name: 'OpenHuman',
+      name: '小鹈鹕',
       description: 'Agent',
       personalityPreview: [],
       safetyRulesPreview: [],

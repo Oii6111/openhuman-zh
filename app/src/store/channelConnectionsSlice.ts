@@ -25,6 +25,7 @@ const initialState: ChannelConnectionsState = {
   connections: {
     telegram: makeEmptyChannelModes(),
     discord: makeEmptyChannelModes(),
+    wechat: makeEmptyChannelModes(),
     web: makeEmptyChannelModes(),
     // Required by `ChannelType` after #2048 widened the union. Empty
     // entries keep the `Record<ChannelType, …>` total — runtime state
@@ -83,6 +84,7 @@ const channelConnectionsSlice = createSlice({
       // for either channel would crash on `state.connections[channel]`
       // being undefined. Pin them by default so the migration is total.
       state.connections.yuanbao = makeEmptyChannelModes();
+      state.connections.wechat = makeEmptyChannelModes();
       state.connections.lark = makeEmptyChannelModes();
       state.connections.dingtalk = makeEmptyChannelModes();
       // MCP virtual channel must be present in persisted states migrated from

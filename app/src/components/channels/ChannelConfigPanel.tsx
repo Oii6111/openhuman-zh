@@ -6,6 +6,7 @@ import DiscordConfig from './DiscordConfig';
 import McpServersTab from './mcp/McpServersTab';
 import TelegramConfig from './TelegramConfig';
 import WebChannelConfig from './WebChannelConfig';
+import WeChatConfig from './WeChatConfig';
 
 interface ChannelConfigPanelProps {
   selectedChannel: ChannelType;
@@ -46,6 +47,7 @@ const ChannelConfigPanel = ({ selectedChannel, definitions }: ChannelConfigPanel
         </div>
         {selectedChannel === 'telegram' && <TelegramConfig definition={definition} />}
         {selectedChannel === 'discord' && <DiscordConfig definition={definition} />}
+        {selectedChannel === 'wechat' && <WeChatConfig definition={definition} />}
         {selectedChannel === 'web' && <WebChannelConfig definition={definition} />}
         {(selectedChannel === 'lark' ||
           selectedChannel === 'dingtalk' ||

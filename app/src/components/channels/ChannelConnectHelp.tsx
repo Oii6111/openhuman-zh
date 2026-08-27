@@ -12,6 +12,7 @@ import { useT } from '../../lib/i18n/I18nContext';
 const CHANNEL_HELP_KEY: Record<string, string> = {
   discord: 'channels.connectHelp.discord',
   telegram: 'channels.connectHelp.telegram',
+  wechat: 'channels.connectHelp.wechat',
 };
 
 interface ChannelConnectHelpProps {

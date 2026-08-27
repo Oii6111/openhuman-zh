@@ -147,7 +147,7 @@ export interface ChatComposerProps {
  * `ComposerPrimitive.Cancel` fire `aui.composer.send()` / `.cancel()`, which the
  * external-store runtime forwards to `chatSurfaceHandlers` as
  * `send(text: string)`. That signature cannot carry this composer's
- * attachments, and it knows nothing about the OpenHuman-specific modifier
+ * attachments, and it knows nothing about the 小鹈鹕-specific modifier
  * semantics `allowParallelSend` implements (plain Enter queues a follow-up
  * mid-stream; Cmd/Ctrl+Enter forks a parallel branch) — routing a send through
  * it would silently drop attachments and collapse the two modifiers into one.
@@ -400,7 +400,7 @@ function ChatComposerBody({
               placeholder ?? (allowParallelSend ? t('chat.followupHint') : t('chat.typeMessage'))
             }
             disabled={composerLocked}
-            // Enter/modifier semantics are entirely OpenHuman's. `submitMode`
+            // Enter/modifier semantics are entirely 小鹈鹕's. `submitMode`
             // is NOT cosmetic here: assistant-ui's own Enter handler runs after
             // ours (Radix composes them) and fires whenever ours merely
             // *declines* to act rather than calling `preventDefault` — which is

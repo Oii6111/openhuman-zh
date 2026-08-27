@@ -14,6 +14,7 @@ use tinychannels::controllers::{
     ChannelThreadResult, DiscordChannelEntry, DiscordChannelListResult, DiscordGuildEntry,
     DiscordGuildListResult, DiscordLinkCheckResult, DiscordLinkStartResult,
     DiscordPermissionCheckResult, TelegramLoginCheckResult, TelegramLoginStartResult,
+    WeChatLoginCheckResult, WeChatLoginStartResult,
 };
 use tinychannels::{ChannelBackend, ChannelOutboundIntent, SendMessage};
 
@@ -324,6 +325,24 @@ impl ChannelBackend for OpenHumanChannelBackend {
     ) -> anyhow::Result<TelegramLoginCheckResult> {
         let config = self.config_with_channels(channels_config);
         into_anyhow(ops::telegram_login_check(&config, link_token).await)
+    }
+
+    async fn wechat_login_start(
+        &self,
+        channels_config: &ChannelsConfig,
+    ) -> anyhow::Result<WeChatLoginStartResult> {
+        let config = self.config_with_channels(channels_config);
+        into_anyhow(ops::wechat_login_start(&config).await)
+    }
+
+    async fn wechat_login_check(
+        &self,
+        channels_config: &ChannelsConfig,
+        session_key: &str,
+        verify_code: Option<&str>,
+    ) -> anyhow::Result<WeChatLoginCheckResult> {
+        let config = self.config_with_channels(channels_config);
+        into_anyhow(ops::wechat_login_check(&config, session_key, verify_code).await)
     }
 
     async fn discord_link_start(

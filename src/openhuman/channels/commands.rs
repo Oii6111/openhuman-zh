@@ -12,6 +12,7 @@ use super::qq::QQChannel;
 use super::signal::SignalChannel;
 use super::slack::SlackChannel;
 use super::telegram::TelegramChannel;
+use super::wechat::WeChatChannel;
 use super::whatsapp::WhatsAppChannel;
 #[cfg(feature = "whatsapp-web")]
 use super::whatsapp_web::WhatsAppWebChannel;
@@ -227,6 +228,16 @@ pub async fn doctor_channels(config: Config) -> Result<()> {
                 qq.app_secret.clone(),
                 qq.allowed_users.clone(),
                 crate::openhuman::config::build_runtime_proxy_client("channel.qq"),
+            )),
+        ));
+    }
+
+    if let Some(ref wx) = config.channels_config.wechat {
+        channels.push((
+            "WeChat",
+            Arc::new(WeChatChannel::with_http_client_from_config(
+                wx.clone(),
+                crate::openhuman::config::build_runtime_proxy_client("channel.wechat"),
             )),
         ));
     }

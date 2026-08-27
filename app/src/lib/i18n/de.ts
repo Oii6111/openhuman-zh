@@ -14,10 +14,10 @@ const messages: TranslationMap = {
   'share.captionPlaceholder': 'Schreibe eine Bildunterschrift...',
   'share.privacyNote':
     'Geteilt werden nur die Überschrift, die Bildunterschrift, der Name des Agenten und das Branding. Dein Chat, dein Gedächtnis und deine Dateien bleiben privat.',
-  'share.defaultHeadline': 'Sieh, was mein OpenHuman-Agent gerade gemacht hat',
+  'share.defaultHeadline': 'Sieh, was mein 小鹈鹕-Agent gerade gemacht hat',
   'share.defaultAgentName': 'Mein Agent',
-  'share.defaultCaption': 'Sieh, was mein OpenHuman-Agent gerade gemacht hat.',
-  'share.captionWithHeadline': '{headline}. Erstellt mit meinem OpenHuman-Agenten.',
+  'share.defaultCaption': 'Sieh, was mein 小鹈鹕-Agent gerade gemacht hat.',
+  'share.captionWithHeadline': '{headline}. Erstellt mit meinem 小鹈鹕-Agenten.',
   'share.linkedInHint': 'Bildunterschrift kopiert. Füge sie in deinen LinkedIn-Beitrag ein.',
   'share.shareX': 'Auf X teilen',
   'share.shareLinkedIn': 'Auf LinkedIn teilen',
@@ -56,7 +56,7 @@ const messages: TranslationMap = {
   'feedback.welcome.eyebrow': 'Feedback',
   'feedback.welcome.title': 'Gestalten Sie mit, was wir bauen',
   'feedback.welcome.body':
-    'Sagen Sie uns, was funktioniert, was fehlt und was OpenHuman besser machen würde. Posten Sie eine Idee, stimmen Sie über die Vorschläge anderer ab und beobachten Sie, wie die besten an die Spitze unserer Roadmap steigen.',
+    'Sagen Sie uns, was funktioniert, was fehlt und was 小鹈鹕 besser machen würde. Posten Sie eine Idee, stimmen Sie über die Vorschläge anderer ab und beobachten Sie, wie die besten an die Spitze unserer Roadmap steigen.',
   'feedback.welcome.ctaShare': 'Idee teilen',
   'feedback.welcome.ctaBoard': 'Board ansehen',
   'feedback.welcome.featsLabel': 'Was Sie tun können',
@@ -125,7 +125,7 @@ const messages: TranslationMap = {
   'rewards.welcome.eyebrow': 'Belohnungen',
   'rewards.welcome.title': 'Werden Sie fürs Dabeisein belohnt',
   'rewards.welcome.body':
-    'Sammeln Sie Punkte, indem Sie OpenHuman nutzen und andere einladen. Halten Sie Ihre Serie am Leben und lösen Sie Ihre Prämien ein. Alles wird an einem Ort erfasst.',
+    'Sammeln Sie Punkte, indem Sie 小鹈鹕 nutzen und andere einladen. Halten Sie Ihre Serie am Leben und lösen Sie Ihre Prämien ein. Alles wird an einem Ort erfasst.',
   'rewards.welcome.ctaView': 'Belohnungen ansehen',
   'rewards.welcome.featsLabel': 'So funktioniert es',
   'rewards.welcome.feat1Title': 'Punkte sammeln',
@@ -181,7 +181,7 @@ const messages: TranslationMap = {
   'settings.core.recheck': 'Erneut prüfen',
   'settings.core.save': 'Speichern & neu starten',
   'settings.core.applyRestartNote':
-    'Beim Speichern startet OpenHuman neu, um die Verbindung herzustellen.',
+    'Beim Speichern startet 小鹈鹕 neu, um die Verbindung herzustellen.',
   // Cross-host vault (#4278)
   'crossHostVault.title': 'Der Vault liegt auf dem Core-Host.',
   'crossHostVault.message':
@@ -189,7 +189,7 @@ const messages: TranslationMap = {
   'conversations.toolFailure.whyLabel': 'Warum',
   'conversations.toolFailure.nextLabel': 'Nächste Schritte',
   'conversations.toolFailure.missingPermission.cause':
-    'OpenHuman hat noch keine Berechtigung, dies zu tun.',
+    '小鹈鹕 hat noch keine Berechtigung, dies zu tun.',
   'conversations.toolFailure.missingPermission.next':
     'Erteile die benötigte Berechtigung und versuche es erneut.',
   'conversations.toolFailure.missingApp.cause':
@@ -197,9 +197,9 @@ const messages: TranslationMap = {
   'conversations.toolFailure.missingApp.next':
     'Installiere oder öffne die App und versuche es erneut.',
   'conversations.toolFailure.serviceUnavailable.cause':
-    'Ein von OpenHuman benötigter Dienst ist vorübergehend nicht verfügbar.',
+    'Ein von 小鹈鹕 benötigter Dienst ist vorübergehend nicht verfügbar.',
   'conversations.toolFailure.serviceUnavailable.next':
-    'OpenHuman versucht es in Kürze erneut – nichts weiter nötig.',
+    '小鹈鹕 versucht es in Kürze erneut – nichts weiter nötig.',
   'conversations.toolFailure.badCredentials.cause':
     'Die gespeicherten Anmeldedaten fehlen oder sind nicht mehr gültig.',
   'conversations.toolFailure.badCredentials.next':
@@ -209,19 +209,19 @@ const messages: TranslationMap = {
   'conversations.toolFailure.blockedByPolicy.next':
     'Erlaube sie unter Einstellungen → Agentenzugriff, wenn sie ausgeführt werden soll.',
   'conversations.toolFailure.modelConnection.cause':
-    'OpenHuman konnte das KI-Modell nicht erreichen.',
+    '小鹈鹕 konnte das KI-Modell nicht erreichen.',
   'conversations.toolFailure.modelConnection.next':
-    'Prüfe deine Verbindung oder Modelleinstellungen; OpenHuman versucht es erneut.',
+    'Prüfe deine Verbindung oder Modelleinstellungen; 小鹈鹕 versucht es erneut.',
   'conversations.toolFailure.timeout.cause': 'Die Aktion hat zu lange gedauert und wurde gestoppt.',
   'conversations.toolFailure.timeout.next':
-    'OpenHuman versucht es erneut, oder du kannst es manuell wiederholen.',
+    '小鹈鹕 versucht es erneut, oder du kannst es manuell wiederholen.',
   'conversations.toolFailure.denied.cause': 'Du hast diese Aktion abgelehnt.',
   'conversations.toolFailure.denied.next':
     'Nichts zu tun: sie wurde nicht ausgeführt. Frag erneut, wenn du es dir anders überlegst.',
   'conversations.toolFailure.approvalExpired.cause':
     'Die Genehmigungsanfrage ist abgelaufen, bevor jemand geantwortet hat.',
   'conversations.toolFailure.approvalExpired.next':
-    'Frag erneut, um sie auszuführen: OpenHuman versucht es nicht von selbst erneut.',
+    'Frag erneut, um sie auszuführen: 小鹈鹕 versucht es nicht von selbst erneut.',
   'conversations.toolFailure.unknown.cause': 'Bei dieser Aktion ist etwas schiefgelaufen.',
   'conversations.toolFailure.unknown.next':
     'Versuche es erneut; wenn es weiterhin fehlschlägt, führe die Diagnose in den Einstellungen aus.',
@@ -347,15 +347,15 @@ const messages: TranslationMap = {
   'orchPage.medulla.nav': 'Übersicht',
   'orchPage.medulla.badge': 'Demnächst verfügbar',
   'orchPage.medulla.title': 'Medulla',
-  'orchPage.medulla.tagline': 'Das Orchestrierungsmodell von OpenHuman',
+  'orchPage.medulla.tagline': 'Das Orchestrierungsmodell von 小鹈鹕',
   'orchPage.medulla.body':
-    'Medulla ist das eigens entwickelte LLM von OpenHuman. Es ist darauf ausgelegt, Tausende Agenten gleichzeitig zu orchestrieren, verfügt über ein Kontextfenster von 10 Millionen Tokens und ermöglicht eine radikal kostengünstigere Orchestrierung.',
+    'Medulla ist das eigens entwickelte LLM von 小鹈鹕. Es ist darauf ausgelegt, Tausende Agenten gleichzeitig zu orchestrieren, verfügt über ein Kontextfenster von 10 Millionen Tokens und ermöglicht eine radikal kostengünstigere Orchestrierung.',
   'orchPage.medulla.featAgents': 'Tausende Agenten',
   'orchPage.medulla.featContext': 'Kontext mit 10M Tokens',
   'orchPage.medulla.featCost': 'Kostengünstige Orchestrierung',
-  'orchPage.medulla.subscriberTitle': 'OpenHuman-Abonnenten',
+  'orchPage.medulla.subscriberTitle': '小鹈鹕-Abonnenten',
   'orchPage.medulla.subscriberNote':
-    'Sobald Medulla live geht, ist es exklusiv für OpenHuman-Abonnenten.',
+    'Sobald Medulla live geht, ist es exklusiv für 小鹈鹕-Abonnenten.',
   'orchPage.medulla.subscriberCta': 'Abo abschließen',
   'orchPage.medulla.discordTitle': 'Tritt dem Discord bei',
   'orchPage.medulla.earlyAccess':
@@ -424,7 +424,7 @@ const messages: TranslationMap = {
   'orchPage.connections.replyPlaceholder': 'Antworten…',
   'orchPage.connections.initTitle': 'Einen Agenten oder eine Instanz initialisieren',
   'orchPage.connections.initDesc':
-    'Starte einen neuen Sub-Agenten, der an deiner Seite arbeitet. Öffne den Agent-Chat und beschreibe Rolle, Ziel und Tools: OpenHuman stellt eine eigene Instanz bereit, die du von hier aus steuerst.',
+    'Starte einen neuen Sub-Agenten, der an deiner Seite arbeitet. Öffne den Agent-Chat und beschreibe Rolle, Ziel und Tools: 小鹈鹕 stellt eine eigene Instanz bereit, die du von hier aus steuerst.',
   'orchPage.connections.initCta': 'Im Chat starten',
   'orchPage.connections.status.needsYou': 'Braucht dich',
   'orchPage.connections.status.running': 'Läuft',
@@ -502,7 +502,7 @@ const messages: TranslationMap = {
   'tinyplaceOrchestration.unknownSender': 'Unbekannter Absender',
   'tinyplaceOrchestration.master.title': 'Agent / Mensch',
   'tinyplaceOrchestration.master.subtitle': 'Master-Chat',
-  'tinyplaceOrchestration.master.preview': 'Direkte Koordination zwischen dir und OpenHuman.',
+  'tinyplaceOrchestration.master.preview': 'Direkte Koordination zwischen dir und 小鹈鹕.',
   'tinyplaceOrchestration.subconscious.title': 'Unterbewusstsein',
   'tinyplaceOrchestration.subconscious.subtitle': 'Interne Agenten-Chats',
   'tinyplaceOrchestration.subconscious.preview':
@@ -521,7 +521,7 @@ const messages: TranslationMap = {
   'tinyplaceOrchestration.pairing.incoming': 'Eingehend',
   'tinyplaceOrchestration.pairing.outgoing': 'Ausgehend',
   'tinyplaceOrchestration.master.you': 'Du',
-  'tinyplaceOrchestration.composer.placeholder': 'Nachricht an OpenHuman…',
+  'tinyplaceOrchestration.composer.placeholder': 'Nachricht an 小鹈鹕…',
   'tinyplaceOrchestration.composer.send': 'Senden',
   'tinyplaceOrchestration.composer.sendFailed': 'Nachricht konnte nicht gesendet werden',
   'tinyplaceOrchestration.steering.label': 'Steuerung',
@@ -846,8 +846,8 @@ const messages: TranslationMap = {
   'clearData.failedLogout': 'Abmelden fehlgeschlagen. Bitte versuche es erneut.',
   'clearData.failedPersist':
     'Der persistente App-Status konnte nicht gelöscht werden. Bitte versuche es erneut.',
-  'welcome.logoAlt': 'OpenHuman',
-  'welcome.title': 'Willkommen bei OpenHuman',
+  'welcome.logoAlt': '小鹈鹕',
+  'welcome.title': 'Willkommen bei 小鹈鹕',
   'welcome.subtitle':
     'Deine persönliche KI-Superintelligenz. Privat, einfach und äußerst leistungsstark.',
   'welcome.connectPrompt': 'Konfiguriere RPC URL (Erweitert)',
@@ -857,7 +857,7 @@ const messages: TranslationMap = {
   'welcome.clearAppDataWarning':
     'Dadurch werden lokal gespeicherte Geheimnisse und Konten auf diesem Gerät gelöscht. Dein Cloud-Konto ist nicht betroffen – du kannst dich danach sofort wieder anmelden.',
   'welcome.resetErrorFallback':
-    'App-Daten konnten nicht gelöscht werden. Bitte OpenHuman beenden, neu öffnen und es dann erneut versuchen.',
+    'App-Daten konnten nicht gelöscht werden. Bitte 小鹈鹕 beenden, neu öffnen und es dann erneut versuchen.',
   'welcome.signingIn': 'Ich melde mich an...',
   'welcome.termsIntro': 'Indem Sie fortfahren, stimmen Sie den',
   'welcome.termsOfUse': 'Bedingungen',
@@ -877,7 +877,7 @@ const messages: TranslationMap = {
   'home.statusBackendOnly':
     'Verbindung zum Backend wird wiederhergestellt. Dein Agent wird in Kürze wieder verfügbar sein.',
   'home.statusCoreUnreachable':
-    'Der lokale Core-Sidecar reagiert nicht. Der Hintergrundprozess OpenHuman ist möglicherweise abgestürzt oder konnte nicht gestartet werden.',
+    'Der lokale Core-Sidecar reagiert nicht. Der Hintergrundprozess 小鹈鹕 ist möglicherweise abgestürzt oder konnte nicht gestartet werden.',
   'home.statusInternetOffline':
     'Dein Gerät ist gerade offline. Prüfe dein Netzwerk oder starte die App neu, um die Verbindung wiederherzustellen.',
   'home.restartCore': 'Starte Core neu',
@@ -1222,13 +1222,13 @@ const messages: TranslationMap = {
   'rewards.referrals': 'Empfehlungen',
   'rewards.coupons': 'Einlösen',
   'rewards.localUnavailable':
-    'Ein lokaler Login sammelt keine Belohnungen, Gutscheine oder Empfehlungsguthaben. Melde dich ab und anschließend mit einem OpenHuman-Konto an, wenn Belohnungen zählen sollen.',
+    'Ein lokaler Login sammelt keine Belohnungen, Gutscheine oder Empfehlungsguthaben. Melde dich ab und anschließend mit einem 小鹈鹕-Konto an, wenn Belohnungen zählen sollen.',
   'rewards.localUnavailableCta': 'Kontoeinstellungen öffnen',
   'rewards.credits': 'Credits',
   'rewards.referralCode': 'Dein Empfehlungscode',
   'rewards.copyCode': 'Code kopieren',
   'rewards.share': 'Teilen',
-  'onboarding.welcome': 'Hallo. Ich bin OpenHuman.',
+  'onboarding.welcome': 'Hallo. Ich bin 小鹈鹕.',
   'onboarding.welcomeDesc':
     'Dein superintelligenter KI-Assistent, der auf deinem Computer läuft. Privat, einfach und äußerst leistungsstark.',
   'onboarding.context': 'Kontexterfassung',
@@ -1241,14 +1241,14 @@ const messages: TranslationMap = {
   'onboarding.referral': 'Empfehlung',
   'onboarding.referralDesc': 'Wende einen Empfehlungscode an, falls du einen hast.',
   'onboarding.finish': 'Schließe die Einrichtung',
-  'onboarding.finishDesc': 'Du bist bereit! Beginne mit der Verwendung von OpenHuman.',
+  'onboarding.finishDesc': 'Du bist bereit! Beginne mit der Verwendung von 小鹈鹕.',
   'onboarding.skip': 'Überspringen',
   'onboarding.getStarted': 'Lege los',
-  'onboarding.runtimeChoice.title': 'Wie möchtest du OpenHuman starten?',
+  'onboarding.runtimeChoice.title': 'Wie möchtest du 小鹈鹕 starten?',
   'onboarding.runtimeChoice.subtitle':
     'Wähle das Setup, das am besten zu dir passt. Du kannst es später in den Einstellungen ändern.',
   'onboarding.runtimeChoice.cloud.title': 'Einfach',
-  'onboarding.runtimeChoice.cloud.tagline': 'Lass OpenHuman alles für dich verwalten.',
+  'onboarding.runtimeChoice.cloud.tagline': 'Lass 小鹈鹕 alles für dich verwalten.',
   'onboarding.runtimeChoice.cloud.f1': 'Integrierte Sicherheit',
   'onboarding.runtimeChoice.cloud.f2': 'Token-Komprimierung, um deine Nutzung weiter auszudehnen',
   'onboarding.runtimeChoice.cloud.f3': 'Ein Abonnement, jedes Modell inklusive',
@@ -1305,7 +1305,7 @@ const messages: TranslationMap = {
   'onboarding.custom.stepperMemory': 'Erinnerung',
   'onboarding.custom.stepCounter': 'Schritt {n} von {total}',
   'onboarding.custom.defaultTitle': 'Standard',
-  'onboarding.custom.defaultSubtitle': 'Lass OpenHuman das für dich erledigen.',
+  'onboarding.custom.defaultSubtitle': 'Lass 小鹈鹕 das für dich erledigen.',
   'onboarding.custom.configureTitle': 'Konfigurieren',
   'onboarding.custom.configureSubtitle': 'Ich wähle aus, was ich verwenden möchte.',
   'onboarding.custom.progressAriaLabel': 'Onboarding-Fortschritt',
@@ -1319,40 +1319,40 @@ const messages: TranslationMap = {
   'onboarding.custom.inference.subtitle':
     'Welches Sprachmodell soll deine Fragen beantworten und deine Agenten betreiben?',
   'onboarding.custom.inference.defaultDesc':
-    'OpenHuman leitet jede Arbeitslast an ein sinnvolles Standardmodell weiter. Keine Schlüssel, keine Einrichtung.',
+    '小鹈鹕 leitet jede Arbeitslast an ein sinnvolles Standardmodell weiter. Keine Schlüssel, keine Einrichtung.',
   'onboarding.custom.inference.configureDesc':
     'Bring deinen eigenen OpenAI- oder Anthropic-Schlüssel mit. Wir verwenden ihn für jede textbasierte Arbeitslast.',
   'onboarding.custom.voice.title': 'Stimme',
   'onboarding.custom.voice.subtitle': 'Speech-to-Text und Text-to-Speech für den Sprachmodus.',
   'onboarding.custom.voice.defaultDesc':
-    'OpenHuman wird mit verwaltetem STT/TTS geliefert, das einfach funktioniert. Nichts zu verkabeln.',
+    '小鹈鹕 wird mit verwaltetem STT/TTS geliefert, das einfach funktioniert. Nichts zu verkabeln.',
   'onboarding.custom.voice.configureDesc':
     'Verwende dein eigenes ElevenLabs / OpenAI Whisper / usw. Konfiguriere es in den Einstellungen › Stimme.',
   'onboarding.custom.oauth.title': 'Verbindungen (OAuth)',
   'onboarding.custom.oauth.subtitle':
     'Gmail, Slack, Notion und andere verbundene Dienste, die OAuth benötigen.',
   'onboarding.custom.oauth.defaultDesc':
-    'OpenHuman führt einen verwalteten Composio-Arbeitsbereich aus. Ein Klick, um jeden Dienst später zu verbinden.',
+    '小鹈鹕 führt einen verwalteten Composio-Arbeitsbereich aus. Ein Klick, um jeden Dienst später zu verbinden.',
   'onboarding.custom.oauth.configureDesc':
     'Bring dein eigenes Composio-Konto / API-Schlüssel mit. Konfiguriere unter Einstellungen › Verbindungen.',
   'onboarding.custom.search.title': 'Websuche',
-  'onboarding.custom.search.subtitle': 'Wie OpenHuman das Web in deinem Namen durchsucht.',
+  'onboarding.custom.search.subtitle': 'Wie 小鹈鹕 das Web in deinem Namen durchsucht.',
   'onboarding.custom.search.defaultDesc':
-    'OpenHuman verwendet ein verwaltetes Such-Backend. Keine Schlüssel erforderlich.',
+    '小鹈鹕 verwendet ein verwaltetes Such-Backend. Keine Schlüssel erforderlich.',
   'onboarding.custom.search.configureDesc':
     'Bring deinen eigenen Suchanbieterschlüssel mit (Tavily, Brave usw.). Konfiguriere unter Einstellungen › Extras.',
   'onboarding.custom.embeddings.title': 'Embeddings',
   'onboarding.custom.embeddings.subtitle':
-    'Wie OpenHuman Vektor-Embeddings für die semantische Gedächtnissuche erstellt.',
+    'Wie 小鹈鹕 Vektor-Embeddings für die semantische Gedächtnissuche erstellt.',
   'onboarding.custom.embeddings.defaultDesc':
-    'OpenHuman verwendet einen verwalteten Embedding-Dienst. Kein API-Schlüssel erforderlich.',
+    '小鹈鹕 verwendet einen verwalteten Embedding-Dienst. Kein API-Schlüssel erforderlich.',
   'onboarding.custom.embeddings.configureDesc':
     'Eigenen Embedding-Anbieter einbinden (OpenAI, Voyage, Ollama usw.).',
   'onboarding.custom.memory.title': 'Erinnerung',
   'onboarding.custom.memory.subtitle':
-    'Wie OpenHuman sich deinen Kontext, deine Vorlieben und frühere Gespräche merkt.',
+    'Wie 小鹈鹕 sich deinen Kontext, deine Vorlieben und frühere Gespräche merkt.',
   'onboarding.custom.memory.defaultDesc':
-    'OpenHuman verwaltet die Speicherung und den Abruf des Speichers automatisch. Nichts einzurichten.',
+    '小鹈鹕 verwaltet die Speicherung und den Abruf des Speichers automatisch. Nichts einzurichten.',
   'onboarding.custom.memory.configureDesc':
     'Überprüfe, exportiere oder lösche den Speicher selbst. Konfiguriere in den Einstellungen › Speicher.',
   'accounts.addAccount': 'Konto hinzufügen',
@@ -1492,7 +1492,7 @@ const messages: TranslationMap = {
   'misc.downloading': 'Herunterladen...',
   'misc.installing': 'Installieren...',
   'misc.beta':
-    'OpenHuman befindet sich in der frühen Betaphase. Teile uns gerne dein Feedback mit oder melde Fehler, auf die du stößt – jede Meldung hilft uns, schneller zu liefern.',
+    '小鹈鹕 befindet sich in der frühen Betaphase. Teile uns gerne dein Feedback mit oder melde Fehler, auf die du stößt – jede Meldung hilft uns, schneller zu liefern.',
   'misc.betaFeedback': 'Feedback senden',
   'mnemonic.title': 'Wiederherstellungssatz',
   'mnemonic.warning':
@@ -1517,11 +1517,11 @@ const messages: TranslationMap = {
   'privacy.anonymizedAnalytics': 'Produktanalysen',
   'privacy.shareAnonymizedData': 'Produktanalysen und Diagnosen teilen',
   'privacy.shareAnonymizedDataDesc':
-    'Hilf mit, OpenHuman zu verbessern, indem du datensparsame Absturzberichte und Nutzungsereignisse teilst, einschließlich einer stabilen Konto-ID und App-Versionsmetadaten. Nachrichten, Wallet-Schlüssel, API-Schlüssel und Sitzungstokens werden nie erfasst.',
+    'Hilf mit, 小鹈鹕 zu verbessern, indem du datensparsame Absturzberichte und Nutzungsereignisse teilst, einschließlich einer stabilen Konto-ID und App-Versionsmetadaten. Nachrichten, Wallet-Schlüssel, API-Schlüssel und Sitzungstokens werden nie erfasst.',
   'privacy.meetingFollowUps': 'Nachbereitung von Besprechungen',
   'privacy.autoHandoffMeet': 'Automatische Übergabe Google Meet-Transkripte an den Orchestrator',
   'privacy.autoHandoffMeetDesc':
-    'Wenn ein Google Meet-Anruf endet, kann der Orchestrator von OpenHuman das Transkript lesen und Maßnahmen wie das Verfassen von Nachrichten, das Planen von Folgemaßnahmen oder das Veröffentlichen von Zusammenfassungen in deinem verbundenen Slack-Arbeitsbereich ergreifen. Standardmäßig deaktiviert.',
+    'Wenn ein Google Meet-Anruf endet, kann der Orchestrator von 小鹈鹕 das Transkript lesen und Maßnahmen wie das Verfassen von Nachrichten, das Planen von Folgemaßnahmen oder das Veröffentlichen von Zusammenfassungen in deinem verbundenen Slack-Arbeitsbereich ergreifen. Standardmäßig deaktiviert.',
   'privacy.analyticsDisclaimer':
     'Wenn diese Option aktiviert ist, können Produktanalysen und Diagnosen datensparsame Absturzberichte und Nutzungsereignisse, eine stabile Konto-ID und App-Versionsmetadaten enthalten. Nachrichten, Wallet-Schlüssel, API-Schlüssel und Sitzungstokens werden nie erfasst. Du kannst diese Einstellung jederzeit ändern.',
   'settings.about.version': 'Version',
@@ -1533,7 +1533,7 @@ const messages: TranslationMap = {
   'settings.about.releases': 'Veröffentlichungen',
   'settings.about.releasesDesc': 'Durchsuche Versionshinweise und frühere Builds auf GitHub.',
   'settings.about.openReleases': 'Öffne GitHub-Releases',
-  'settings.about.starCta.title': 'Gefällt dir OpenHuman?',
+  'settings.about.starCta.title': 'Gefällt dir 小鹈鹕?',
   'settings.about.starCta.body': 'Gib uns einen Stern auf GitHub. So finden mehr Menschen zu uns.',
   'settings.about.starCta.star': 'Auf GitHub einen Stern vergeben',
   'settings.about.starCta.dismiss': 'Nicht jetzt',
@@ -1618,18 +1618,18 @@ const messages: TranslationMap = {
     'Senden Sie eine Agentennachricht: Die Tokenverwendung des nächsten Anbieteranrufs füllt das Diagramm innerhalb von ~10 Sekunden aus.',
   'settings.search.title': 'Suchmaschine',
   'settings.search.menuDesc':
-    'Verwenden Sie standardmäßig die von OpenHuman verwaltete Suche oder verbinden Sie Ihren eigenen Anbieter mit einem API-Schlüssel.',
+    'Verwenden Sie standardmäßig die von 小鹈鹕 verwaltete Suche oder verbinden Sie Ihren eigenen Anbieter mit einem API-Schlüssel.',
   'settings.search.description':
-    'Wählen Sie die Suchmaschine, die der Agent verwendet, oder deaktivieren Sie Suchwerkzeuge vollständig. „Verwaltet“ nutzt das Backend von OpenHuman (keine Einrichtung erforderlich). Parallel, Brave, Querit und Exa laufen direkt von Ihrem Gerät aus und verwenden Ihren API-Schlüssel.',
+    'Wählen Sie die Suchmaschine, die der Agent verwendet, oder deaktivieren Sie Suchwerkzeuge vollständig. „Verwaltet“ nutzt das Backend von 小鹈鹕 (keine Einrichtung erforderlich). Parallel, Brave, Querit und Exa laufen direkt von Ihrem Gerät aus und verwenden Ihren API-Schlüssel.',
   'settings.search.engineAria': 'Suchmaschine',
   'settings.search.engineDisabledLabel': 'Disabled',
   'settings.search.engineDisabledDesc':
     'Suchwerkzeuge aus dem Agenten-Kontext und der verfügbaren Tool-Liste entfernen.',
-  'settings.search.engineManagedLabel': 'OpenHuman Verwaltet',
+  'settings.search.engineManagedLabel': '小鹈鹕 Verwaltet',
   'settings.search.engineManagedDesc':
-    'Standard. Wird über das OpenHuman-Backend geleitet, aktuell betrieben von Exa: kein API-Schlüssel erforderlich.',
+    'Standard. Wird über das 小鹈鹕-Backend geleitet, aktuell betrieben von Exa: kein API-Schlüssel erforderlich.',
   'settings.search.localManagedUnavailable':
-    'Die von OpenHuman verwaltete Suche ist für lokale Benutzer nicht verfügbar. Füge deinen eigenen Parallel-, Brave-, Querit- oder Exa-API-Schlüssel hinzu, um die Websuche zu aktivieren.',
+    'Die von 小鹈鹕 verwaltete Suche ist für lokale Benutzer nicht verfügbar. Füge deinen eigenen Parallel-, Brave-, Querit- oder Exa-API-Schlüssel hinzu, um die Websuche zu aktivieren.',
   'settings.search.engineParallelLabel': 'Parallel',
   'settings.search.engineParallelDesc':
     'Direct Parallel API: Such-, Extrahierungs-, Chat-, Recherche-, Anreicherungs- und Datensatz-Tools.',
@@ -1688,15 +1688,15 @@ const messages: TranslationMap = {
   'settings.embeddings.providerAria': 'Embedding-Anbieter',
   'settings.embeddings.statusConfigured': 'Konfiguriert',
   'settings.embeddings.statusNeedsKey': 'API-Schlüssel benötigt',
-  'settings.embeddings.requiresSignIn': 'OpenHuman-Anmeldung erforderlich',
+  'settings.embeddings.requiresSignIn': '小鹈鹕-Anmeldung erforderlich',
   'settings.embeddings.managedLoginRequired':
-    'Verwaltete Einbettungen erfordern eine OpenHuman-Anmeldung. Melde dich an, um das OpenHuman-Backend zu verwenden.',
+    'Verwaltete Einbettungen erfordern eine 小鹈鹕-Anmeldung. Melde dich an, um das 小鹈鹕-Backend zu verwenden.',
   'settings.embeddings.managedBannerIntro':
-    'Verwaltete Einbettungen laufen über das OpenHuman-Backend und erfordern eine OpenHuman-Kontositzung.',
+    'Verwaltete Einbettungen laufen über das 小鹈鹕-Backend und erfordern eine 小鹈鹕-Kontositzung.',
   'settings.embeddings.managedBannerLocalSession':
     'Beende die lokale Sitzung und melde dich an, um diesen Anbieter zu verwenden, oder wechsle zu einem lokalen oder eigenen Einbettungsanbieter.',
   'settings.embeddings.managedBannerRemoteSession':
-    'Melde dich erneut an, um deine OpenHuman-Sitzung zu aktualisieren, oder wechsle zu einem lokalen oder eigenen Einbettungsanbieter.',
+    'Melde dich erneut an, um deine 小鹈鹕-Sitzung zu aktualisieren, oder wechsle zu einem lokalen oder eigenen Einbettungsanbieter.',
   'settings.embeddings.signInAgain': 'Erneut anmelden',
   'settings.embeddings.apiKeyLabel': '{provider} API-Schlüssel',
   'settings.embeddings.apiKeyLabelGeneric': 'API-Schlüssel',
@@ -1757,14 +1757,14 @@ const messages: TranslationMap = {
     'Verschlüsselt in der lokalen MCP-Geheimnistabelle gespeichert. Niemals protokolliert oder an ein Modell gesendet.',
   'devices.betaBadge': 'Beta',
   'devices.betaText':
-    'Diese Funktion befindet sich derzeit in der Beta-Phase. Koppele iOS-Geräte mit diesem OpenHuman, um sie als Remote-Client zu verwenden.',
+    'Diese Funktion befindet sich derzeit in der Beta-Phase. Koppele iOS-Geräte mit diesem 小鹈鹕, um sie als Remote-Client zu verwenden.',
   'devices.comingSoonDescription':
     'Gerätekopplung kommt bald. Diese Seite wird für das Koppeln von iPhones und die Verwaltung verbundener Geräte zuständig sein.',
   'devices.title': 'Geräte',
   'devices.pairIphone': 'iPhone koppeln',
   'devices.noPaired': 'Keine gekoppelten Geräte',
   'devices.emptyState':
-    'Scanne einen QR-Code auf deinem iPhone, um es mit dieser OpenHuman-Sitzung zu verbinden.',
+    'Scanne einen QR-Code auf deinem iPhone, um es mit dieser 小鹈鹕-Sitzung zu verbinden.',
   'devices.devicePairedTitle': 'Gerät gekoppelt.',
   'devices.devicePairedMessage': 'iPhone erfolgreich verbunden.',
   'devices.deviceRevokedTitle': 'Gerät widerrufen',
@@ -1786,7 +1786,7 @@ const messages: TranslationMap = {
   'devices.pairModal.title': 'iPhone koppeln',
   'devices.pairModal.loading': 'Kopplungscode wird erzeugt…',
   'devices.pairModal.instructions':
-    'Öffne die OpenHuman-App auf deinem iPhone und scanne diesen Code.',
+    'Öffne die 小鹈鹕-App auf deinem iPhone und scanne diesen Code.',
   'devices.pairModal.expiresIn': 'Code läuft in ~{count} Minute ab',
   'devices.pairModal.expiresInPlural': 'Code läuft in ~{count} Minuten ab',
   'devices.pairModal.showDetails': 'Details anzeigen',
@@ -2057,7 +2057,7 @@ const messages: TranslationMap = {
   'mcp.connectAuth.reconnectFailed':
     'Anmeldedaten gespeichert, aber die Verbindung ist fehlgeschlagen.',
   'mcp.connectAuth.oauthHint':
-    'Dieser Server verwendet OAuth. Melden Sie sich über Ihren Browser an, um OpenHuman zu autorisieren.',
+    'Dieser Server verwendet OAuth. Melden Sie sich über Ihren Browser an, um 小鹈鹕 zu autorisieren.',
   'mcp.connectAuth.signIn': 'Im Browser anmelden',
   'mcp.connectAuth.oauthWaiting': 'Warten auf Anmeldung…',
   'mcp.connectAuth.oauthOrToken':
@@ -2079,7 +2079,7 @@ const messages: TranslationMap = {
   'autonomy.title': 'Agentenautonomie',
   'autonomy.maxActionsLabel': 'Maximale Aktionen pro Stunde',
   'autonomy.maxActionsHelp':
-    'Maximale Anzahl von Tool-Aktionen, die ein Agent pro rollierender Stunde ausführen darf. Der neue Wert gilt ab dem nächsten Chat. Cron-Jobs und Kanal-Listener behalten ihr aktuelles Limit, bis OpenHuman neu gestartet wird.',
+    'Maximale Anzahl von Tool-Aktionen, die ein Agent pro rollierender Stunde ausführen darf. Der neue Wert gilt ab dem nächsten Chat. Cron-Jobs und Kanal-Listener behalten ihr aktuelles Limit, bis 小鹈鹕 neu gestartet wird.',
   'autonomy.statusSaving': 'Wird gespeichert…',
   'autonomy.statusSaved': 'Gespeichert.',
   'autonomy.statusFailed': 'Fehlgeschlagen',
@@ -2135,7 +2135,7 @@ const messages: TranslationMap = {
   'settings.billing.browserOpenFailed':
     'Der Browser konnte nicht automatisch geöffnet werden. Nutze den Button oben.',
   'settings.tools.chooseCapabilities':
-    'Wähle aus, welche Funktionen OpenHuman in deinem Namen nutzen kann.',
+    'Wähle aus, welche Funktionen 小鹈鹕 in deinem Namen nutzen kann.',
   'settings.tools.saveChanges': 'Änderungen speichern',
   'settings.tools.preferencesSaved': 'Einstellungen gespeichert',
   'settings.tools.saveFailed':
@@ -2392,8 +2392,8 @@ const messages: TranslationMap = {
   'voice.providers.piperPreset.alanMedium': 'GB · Alan (männlich)',
   'voice.providers.piperPreset.jennyDiocoMedium': 'GB · Jenny Dioco (weiblich)',
   'voice.providers.piperPreset.northernEnglishMaleMedium': 'GB · Nordenglisch (männlich)',
-  'voice.providers.chip.cloud': 'OpenHuman (Verwaltet)',
-  'voice.providers.chip.cloudAria': 'Verwalteter OpenHuman-Anbieter ist immer aktiv',
+  'voice.providers.chip.cloud': '小鹈鹕 (Verwaltet)',
+  'voice.providers.chip.cloudAria': 'Verwalteter 小鹈鹕-Anbieter ist immer aktiv',
   'voice.providers.chip.piper': 'Piper (Lokal)',
   'voice.providers.chip.enablePiper': 'Lokales Piper TTS aktivieren',
   'voice.providers.chip.disablePiper': 'Lokales Piper TTS deaktivieren',
@@ -2437,7 +2437,7 @@ const messages: TranslationMap = {
   'voice.externalProviders.add': 'Add',
   'pttSettings.title': 'Push-to-Talk',
   'pttSettings.description':
-    'Halte eine Taste gedrückt, um mit OpenHuman zu sprechen, während du eine andere App nutzt. Loslassen sendet die Aufnahme; wenn „Antworten vorlesen" aktiviert ist, antwortet OpenHuman per Sprachausgabe.',
+    'Halte eine Taste gedrückt, um mit 小鹈鹕 zu sprechen, während du eine andere App nutzt. Loslassen sendet die Aufnahme; wenn „Antworten vorlesen" aktiviert ist, antwortet 小鹈鹕 per Sprachausgabe.',
   'pttSettings.shortcutLabel': 'Tastenkürzel',
   'pttSettings.shortcutPlaceholder': 'Taste drücken (z. B. F13)',
   'pttSettings.shortcutUnsetHint':
@@ -2450,11 +2450,11 @@ const messages: TranslationMap = {
     'Wähle eine normale Taste (z. B. F13): reine Modifikator-Kürzel funktionieren bei Push-to-Talk nicht.',
   'pttSettings.errorEmpty': 'Wähle eine Taste zum Binden.',
   'pttSettings.errorAccessibility':
-    'macOS benötigt für dieses Tastenkürzel die Bedienungshilfen-Berechtigung. Öffne Systemeinstellungen → Datenschutz & Sicherheit → Bedienungshilfen und aktiviere OpenHuman.',
+    'macOS benötigt für dieses Tastenkürzel die Bedienungshilfen-Berechtigung. Öffne Systemeinstellungen → Datenschutz & Sicherheit → Bedienungshilfen und aktiviere 小鹈鹕.',
   'pttSettings.errorShortcutInUse':
     'Eine andere App verwendet dieses Tastenkürzel bereits. Wähle ein anderes.',
   'pttSettings.errorUnsupportedWayland':
-    'Wayland-Sitzungen unterstützen globale Tastenkürzel in OpenHuman noch nicht: wechsle zu einer X11-Sitzung oder nutze den In-App-Diktierschalter.',
+    'Wayland-Sitzungen unterstützen globale Tastenkürzel in 小鹈鹕 noch nicht: wechsle zu einer X11-Sitzung oder nutze den In-App-Diktierschalter.',
   'pttSettings.exclusiveFullscreenHint':
     'In exklusivem Vollbild rendert das Overlay nicht: du hörst nur den Hinweiston. Wechsle zu randlosem Vollbild für das Overlay.',
   'pttOverlay.listening': 'Höre zu…',
@@ -2649,13 +2649,13 @@ const messages: TranslationMap = {
   'chat.attachment.tooManyFiles': 'Maximal {max} Dateien pro Nachricht',
   'chat.attachment.tooManyVideos': 'Maximal {max} Videos pro Nachricht',
   'chat.attachment.videoNotSupported':
-    'Dieses Modell kann keine Videos lesen. Du kannst die OpenHuman-Stufe „Denkmodus“ verwenden, um dein Video anzuhängen.',
+    'Dieses Modell kann keine Videos lesen. Du kannst die 小鹈鹕-Stufe „Denkmodus“ verwenden, um dein Video anzuhängen.',
   'chat.attachment.dropToAttach': 'Dateien zum Anhängen ablegen',
   'chat.attachment.tooLarge': 'Bild überschreitet die Größenbeschränkung von {max}',
   'chat.attachment.unsupportedType':
     'Nicht unterstützter Dateityp. Verwenden Sie ein Bild (PNG, JPEG, WebP, GIF, BMP) oder eine PDF-, TXT- oder Markdown-Datei.',
   'chat.attachment.imageNotSupported':
-    'Dieses Modell kann keine Bilder lesen. Du kannst die OpenHuman-Stufe „Denkmodus“ verwenden, um dein Bild anzuhängen.',
+    'Dieses Modell kann keine Bilder lesen. Du kannst die 小鹈鹕-Stufe „Denkmodus“ verwenden, um dein Bild anzuhängen.',
   'chat.attachment.readFailed': 'Datei konnte nicht gelesen werden',
   'memory.searchAria': 'Speicher durchsuchen',
   'memory.searchPlaceholder': 'Speichereinträge durchsuchen...',
@@ -3009,9 +3009,9 @@ const messages: TranslationMap = {
   'bootCheck.chooseCoreMode': 'Wähle eine Laufzeit aus',
   'bootCheck.connectToCore': 'Stelle eine Verbindung zu deiner Laufzeit her',
   'bootCheck.desktopDescription':
-    'OpenHuman benötigt eine Laufzeit zum Nachdenken. Wähle, wo es leben soll.',
+    '小鹈鹕 benötigt eine Laufzeit zum Nachdenken. Wähle, wo es leben soll.',
   'bootCheck.webDescription':
-    'Im Web stellt OpenHuman eine Verbindung zu einer von dir gesteuerten Laufzeit her. Gib unten den URL und das Authentifizierungstoken ein oder greife auf die Desktop-App zu, um eine direkt auf deinem Computer auszuführen.',
+    'Im Web stellt 小鹈鹕 eine Verbindung zu einer von dir gesteuerten Laufzeit her. Gib unten den URL und das Authentifizierungstoken ein oder greife auf die Desktop-App zu, um eine direkt auf deinem Computer auszuführen.',
   'bootCheck.preferDesktop': 'Möchtest du lieber alles auf deinem eigenen Gerät behalten?',
   'bootCheck.downloadDesktop': 'Hol dir die Desktop-App',
   'bootCheck.localRecommended': 'Lokal ausführen (empfohlen)',
@@ -3039,7 +3039,7 @@ const messages: TranslationMap = {
   'bootCheck.quit': 'Beenden',
   'bootCheck.legacyDetected': 'Legacy-Hintergrundlaufzeit erkannt',
   'bootCheck.legacyDescription':
-    'Auf diesem Gerät läuft bereits ein separat installierter OpenHuman-Daemon. Wir müssen es bereinigen, bevor die integrierte Laufzeit übernehmen kann.',
+    'Auf diesem Gerät läuft bereits ein separat installierter 小鹈鹕-Daemon. Wir müssen es bereinigen, bevor die integrierte Laufzeit übernehmen kann.',
   'bootCheck.removing': 'Entfernen…',
   'bootCheck.removeContinue': 'Entfernen und fortfahren',
   'bootCheck.localNeedsRestart': 'Die lokale Laufzeit erfordert einen Neustart',
@@ -3061,13 +3061,13 @@ const messages: TranslationMap = {
   'bootCheck.actionFailed': 'Etwas ist schief gelaufen. Bitte versuche es erneut.',
   'bootCheck.portConflictTitle': 'App-Engine konnte nicht gestartet werden',
   'bootCheck.portConflictBody':
-    'Ein anderer Prozess nutzt den Netzwerkport, den OpenHuman benötigt. Wir versuchen, das automatisch zu beheben.',
+    'Ein anderer Prozess nutzt den Netzwerkport, den 小鹈鹕 benötigt. Wir versuchen, das automatisch zu beheben.',
   'bootCheck.portConflictFixButton': 'Automatisch beheben',
   'bootCheck.portConflictFixing': 'Wird behoben…',
   'bootCheck.portConflictFixFailed':
     'Automatische Behebung fehlgeschlagen. Bitte starten Sie Ihren Computer neu und versuchen Sie es erneut.',
   'bootCheck.portConflictOwner':
-    '{name} (PID {pid}) verwendet den Netzwerkport, den OpenHuman benötigt.',
+    '{name} (PID {pid}) verwendet den Netzwerkport, den 小鹈鹕 benötigt.',
   'bootCheck.portConflictGuidance':
     'Schließen Sie dieses Programm, um den Port freizugeben, oder erzwingen Sie unten das Beenden, und versuchen Sie es erneut.',
   'bootCheck.portConflictForceQuit': '{name} beenden erzwingen',
@@ -3108,7 +3108,7 @@ const messages: TranslationMap = {
     'Die Laufzeitumgebung konnte ihre Konfigurationsdatei nicht lesen. config.toml gehört möglicherweise einem anderen Benutzerkonto oder ist für den Laufzeitprozess aus einem anderen Grund nicht zugänglich. Starten Sie die Laufzeitumgebung neu, und reparieren Sie andernfalls die Besitzrechte des Arbeitsverzeichnisses oder erstellen Sie dessen Volume neu.',
   'welcome.localSessionErrorFallback': 'Lokale Sitzung konnte nicht gestartet werden.',
   'welcome.gatewaySessionErrorFallback':
-    'Die Anmeldung konnte gerade nicht abgeschlossen werden. Der Sitzungsspeicher hat nicht rechtzeitig geantwortet (auch nach erneutem Versuch). Bitte starten Sie OpenHuman neu und versuchen Sie es erneut.',
+    'Die Anmeldung konnte gerade nicht abgeschlossen werden. Der Sitzungsspeicher hat nicht rechtzeitig geantwortet (auch nach erneutem Versuch). Bitte starten Sie 小鹈鹕 neu und versuchen Sie es erneut.',
   'welcome.localSessionDesc':
     'Verwendet ein lokales Offline-Profil und überspringt TinyHumans OAuth.',
   'channels.activeRouteValue': '{channel} über {authMode}',
@@ -3130,7 +3130,7 @@ const messages: TranslationMap = {
   'composio.reconnect': 'Wieder verbinden',
   'composio.expiredAuthorization': '{name}-Autorisierung abgelaufen',
   'composio.expiredDescription':
-    'Stellen Sie die Verbindung erneut her, um {name}-Tools erneut zu aktivieren. OpenHuman sorgt dafür, dass diese Integration nicht verfügbar bleibt, bis Sie den OAuth-Zugriff aktualisieren.',
+    'Stellen Sie die Verbindung erneut her, um {name}-Tools erneut zu aktivieren. 小鹈鹕 sorgt dafür, dass diese Integration nicht verfügbar bleibt, bis Sie den OAuth-Zugriff aktualisieren.',
   'composio.envVarOverrides': 'festgelegt ist, überschreibt es diese Einstellung.',
   'composio.previewBadge': 'Vorschau',
   'composio.colApp': 'App',
@@ -3154,7 +3154,7 @@ const messages: TranslationMap = {
   'mic.failedToStopRecording': 'Aufzeichnung konnte nicht gestoppt werden: {message}',
   'mic.transcriptionFailed': 'Transkription fehlgeschlagen: {message}',
   'mic.voiceNotCompiled':
-    'Sprachtranskription ist in dieser App-Version nicht enthalten. Aktualisiere OpenHuman, um sie zu aktivieren.',
+    'Sprachtranskription ist in dieser App-Version nicht enthalten. Aktualisiere 小鹈鹕, um sie zu aktivieren.',
   'reflections.kind.retrospective': 'Retrospektive',
   'reflections.kind.derivedFact': 'Abgeleitete Tatsache',
   'reflections.kind.moodInsight': 'Stimmungseinsicht',
@@ -3178,7 +3178,7 @@ const messages: TranslationMap = {
   'accounts.respondQueue.title': 'Antwortwarteschlange',
   'app.connectionBadge.composio': 'Composio',
   'app.connectionBadge.messaging': 'Nachrichten',
-  'app.connectionIndicator.connected': 'Verbunden mit OpenHuman AI 🚀',
+  'app.connectionIndicator.connected': 'Verbunden mit 小鹈鹕 AI 🚀',
   'app.connectionIndicator.connecting': 'Verbinden',
   'app.connectionIndicator.coreOffline': 'Core offline',
   'app.connectionIndicator.disconnected': 'Nicht verbunden',
@@ -3222,12 +3222,12 @@ const messages: TranslationMap = {
   'app.openhumanLink.notifications.desktopOnly':
     'Native Benachrichtigungen sind nur in der Desktop-App verfügbar (führe `pnpm dev:app` aus).',
   'app.openhumanLink.notifications.permissionOff':
-    'Die Benachrichtigungsberechtigung ist deaktiviert. Aktiviere OpenHuman in den Systemeinstellungen → Benachrichtigungen und versuche es erneut.',
+    'Die Benachrichtigungsberechtigung ist deaktiviert. Aktiviere 小鹈鹕 in den Systemeinstellungen → Benachrichtigungen und versuche es erneut.',
   'app.openhumanLink.notifications.triggerFailed':
-    'OpenHuman konnte keine Systembenachrichtigung auslösen. Überprüfe die Benachrichtigungseinstellungen des Betriebssystems und versuche es erneut.',
+    '小鹈鹕 konnte keine Systembenachrichtigung auslösen. Überprüfe die Benachrichtigungseinstellungen des Betriebssystems und versuche es erneut.',
   'app.openhumanLink.notifications.welcomeBody':
     'Du erhältst hier Hinweise, wenn etwas deine Aufmerksamkeit erfordert.',
-  'app.openhumanLink.notifications.welcomeTitle': 'OpenHuman ist startklar',
+  'app.openhumanLink.notifications.welcomeTitle': '小鹈鹕 ist startklar',
   'app.openhumanLink.status.closed': 'Geschlossen',
   'app.openhumanLink.status.connected': 'Verbunden',
   'app.openhumanLink.status.error': 'Fehler',
@@ -3247,7 +3247,7 @@ const messages: TranslationMap = {
   'app.openhumanLink.notifications.send': 'Testbenachrichtigung senden',
   'app.openhumanLink.notifications.sendFailed': 'Konnte nicht gesendet werden: {error}',
   'app.openhumanLink.notifications.sent':
-    'Testbenachrichtigung gesendet. Wenn du sie nicht erhalten hast, gehe zu Systemeinstellungen → Benachrichtigungen → OpenHuman, aktiviere „Benachrichtigungen zulassen“ und stelle den Bannerstil auf „Persistent“ ein.',
+    'Testbenachrichtigung gesendet. Wenn du sie nicht erhalten hast, gehe zu Systemeinstellungen → Benachrichtigungen → 小鹈鹕, aktiviere „Benachrichtigungen zulassen“ und stelle den Bannerstil auf „Persistent“ ein.',
   'app.openhumanLink.skipForNow': 'Erstmal überspringen',
   'app.openhumanLink.telegramUnavailable': 'Telegram nicht verfügbar',
   'app.openhumanLink.title.accounts': 'Verbinde deine Apps',
@@ -3260,7 +3260,7 @@ const messages: TranslationMap = {
   'app.persistRehydration.heading': 'Überschrift',
   'app.persistRehydration.resetCta': 'Zurücksetzen…',
   'app.persistRehydration.resetting': 'Zurücksetzen…',
-  'app.routeLoading.initializing': 'OpenHuman wird initialisiert...',
+  'app.routeLoading.initializing': '小鹈鹕 wird initialisiert...',
   'app.update.currentlyOn': '{version}',
   'app.update.errorFallback': 'Beim Update ist ein Fehler aufgetreten.',
   'app.update.header.default': 'Aktualisieren',
@@ -3359,7 +3359,7 @@ const messages: TranslationMap = {
   'chat.flowProposal.stepKind.transform': 'Transformieren',
   'chat.flowProposal.stepKind.outputParser': 'Ausgabe auswerten',
   'chat.flowProposal.stepKind.subWorkflow': 'Unter-Workflow',
-  'channels.authMode.managed_dm': 'Mit OpenHuman anmelden',
+  'channels.authMode.managed_dm': 'Mit 小鹈鹕 anmelden',
   'channels.authMode.oauth': 'OAuth-Anmeldung',
   'channels.authMode.bot_token': 'Eigenen Bot-Token verwenden',
   'channels.authMode.api_key': 'Eigenen API-Schlüssel verwenden',
@@ -3371,9 +3371,9 @@ const messages: TranslationMap = {
   'channels.discord.description': 'Sende und empfange Nachrichten über Discord.',
   'channels.discord.authMode.bot_token.description': 'Gib deinen eigenen Discord-Bot-Token an.',
   'channels.discord.authMode.oauth.description':
-    'Installiere den OpenHuman-Bot über OAuth auf deinem Discord-Server.',
+    'Installiere den 小鹈鹕-Bot über OAuth auf deinem Discord-Server.',
   'channels.discord.authMode.managed_dm.description':
-    'Verknüpfe dein persönliches Discord-Konto mit dem OpenHuman-Bot.',
+    'Verknüpfe dein persönliches Discord-Konto mit dem 小鹈鹕-Bot.',
   'channels.discord.fields.bot_token.label': 'Bot-Token',
   'channels.discord.fields.bot_token.placeholder': 'Dein Discord-Bot-Token',
   'channels.discord.fields.guild_id.label': 'Server- (Guild-) ID',
@@ -3382,7 +3382,7 @@ const messages: TranslationMap = {
   'channels.telegram.displayName': 'Telegram',
   'channels.telegram.description': 'Sende und empfange Nachrichten über Telegram.',
   'channels.telegram.authMode.managed_dm.description':
-    'Schreibe dem OpenHuman-Telegram-Bot direkt.',
+    'Schreibe dem 小鹈鹕-Telegram-Bot direkt.',
   'channels.telegram.authMode.bot_token.description':
     'Gib deinen eigenen Telegram-Bot-Token von @BotFather an.',
   'channels.telegram.fields.bot_token.label': 'Bot-Token',
@@ -3395,9 +3395,9 @@ const messages: TranslationMap = {
     'Senden Sie von einem zulässigen Telegram-Chat aus /status, /sessions, /new oder /help. Das Modellrouting verwendet weiterhin /model und /models.',
   'channels.connectHelp.title': 'So verbindest du',
   'channels.connectHelp.discord':
-    'Wähle unten eine Methode: verknüpfe dein Konto über OpenHuman, installiere den Bot per OAuth oder füge deinen eigenen Bot-Token aus dem Discord-Entwicklerportal ein.',
+    'Wähle unten eine Methode: verknüpfe dein Konto über 小鹈鹕, installiere den Bot per OAuth oder füge deinen eigenen Bot-Token aus dem Discord-Entwicklerportal ein.',
   'channels.connectHelp.telegram':
-    'Wähle unten eine Methode: schreibe dem verwalteten OpenHuman-Bot, um ihn zu verknüpfen, oder füge deinen eigenen Bot-Token von @BotFather ein.',
+    'Wähle unten eine Methode: schreibe dem verwalteten 小鹈鹕-Bot, um ihn zu verknüpfen, oder füge deinen eigenen Bot-Token von @BotFather ein.',
   'channels.connectHelp.slackNote':
     'Du suchst Slack? Slack wird als App unter Verbindungen → OAuth verbunden, nicht als Messaging-Kanal hier.',
   'channels.web.displayName': 'Web',
@@ -3463,16 +3463,16 @@ const messages: TranslationMap = {
   'iosPair.error.connectionFailed':
     'Verbindung fehlgeschlagen. Sicherstellen, dass die Desktop-App läuft, und erneut versuchen.',
   'iosPair.error.invalidQr':
-    'Ungültiger QR-Code. Sicherstellen, dass ein OpenHuman-Kopplungscode gescannt wird.',
+    'Ungültiger QR-Code. Sicherstellen, dass ein 小鹈鹕-Kopplungscode gescannt wird.',
   'iosPair.error.unreachableDesktop':
     'Desktop nicht erreichbar. Sicherstellen, dass beide Geräte online sind, und erneut versuchen.',
   'iosPair.expired': 'QR code abgelaufen. Bitten Sie den Desktop, den Code neu zu generieren.',
   'iosPair.instructions':
-    "Öffne OpenHuman auf dem Desktop, gehe zu Einstellungen > Geräte und tippe auf 'Gerät koppeln', um den QR-Code anzuzeigen.",
+    "Öffne 小鹈鹕 auf dem Desktop, gehe zu Einstellungen > Geräte und tippe auf 'Gerät koppeln', um den QR-Code anzuzeigen.",
   'iosPair.retryScan': 'Scan erneut versuchen',
   'iosPair.scanQrCode': 'Scannen QR code',
   'iosPair.scannerOpening': 'Scanner wird geöffnet...',
-  'iosPair.step.openDesktop': 'OpenHuman auf dem Desktop öffnen',
+  'iosPair.step.openDesktop': '小鹈鹕 auf dem Desktop öffnen',
   'iosPair.step.openSettings': 'Gehen Sie zu Einstellungen > Geräte',
   'iosPair.step.showQr': 'Tippen Sie auf „Telefon koppeln“, um QR anzuzeigen',
   'iosPair.title': 'Mit Ihrem Desktop koppeln',
@@ -3507,7 +3507,7 @@ const messages: TranslationMap = {
   'composio.connect.permissionsDefault': 'Lesen + Schreiben ist standardmäßig aktiviert',
   'composio.connect.permissionsNote': 'entlarven kann',
   'composio.connect.permissionsNoteSuffix':
-    'Die eigenen Agentenberechtigungen von OpenHuman werden unten als Lese-, Schreib- und Admin-Umschaltung gesteuert.',
+    'Die eigenen Agentenberechtigungen von 小鹈鹕 werden unten als Lese-, Schreib- und Admin-Umschaltung gesteuert.',
   'composio.connect.reopenBrowser': 'Browser erneut öffnen',
   'composio.connect.requestingUrl': 'Verbindung wird angefordert URL…',
   'composio.connect.requiredFieldEmpty': 'Dieses Feld ist erforderlich.',
@@ -3540,7 +3540,7 @@ const messages: TranslationMap = {
   'composio.triggers.listenFrom': 'Auf Ereignisse hören von',
   'composio.triggers.loadError': 'Trigger konnten nicht geladen werden',
   'composio.triggers.sessionExpired':
-    'Deine OpenHuman-Sitzung ist abgelaufen. Melde dich erneut an, um Trigger zu laden.',
+    'Deine 小鹈鹕-Sitzung ist abgelaufen. Melde dich erneut an, um Trigger zu laden.',
   'composio.triggers.needsConfiguration': 'Muss konfiguriert werden',
   'composio.triggers.noneAvailable': 'Derzeit sind keine Auslöser verfügbar für',
   'conversations.taskKanban.moveLeft': 'Bewege dich nach links',
@@ -3666,7 +3666,7 @@ const messages: TranslationMap = {
   'daemon.serviceBlockingGate.retryFailed':
     'Wiederholungsversuch fehlgeschlagen. Lade den neuesten App-Build herunter und versuche es erneut.',
   'daemon.serviceBlockingGate.retrying': 'Erneuter Versuch...',
-  'daemon.serviceBlockingGate.title': 'OpenHuman Kern ist nicht verfügbar',
+  'daemon.serviceBlockingGate.title': '小鹈鹕 Kern ist nicht verfügbar',
   'home.banners.discordSubtitle': 'Discord Untertitel',
   'home.banners.discordTitle': 'Tritt unserem Discord bei',
   'home.banners.earlyBirdDismiss': 'Frühbucherbanner schließen',
@@ -3702,7 +3702,7 @@ const messages: TranslationMap = {
   'intelligence.diagram.skillInstallCommand': 'npx skills add yizhiyanhua-ai/fireworks-tech-graph',
   'intelligence.diagram.promptExample':
     'Generiere ein Architekturdiagramm des aktuellen Schwarms im dunklen Terminal-Stil',
-  'intelligence.diagram.imageAlt': 'Zuletzt generiertes OpenHuman-Architekturdiagramm',
+  'intelligence.diagram.imageAlt': 'Zuletzt generiertes 小鹈鹕-Architekturdiagramm',
   'intelligence.diagram.refreshesEvery': 'Aktualisiert alle {seconds} s',
   'intelligence.memoryText.entityTypePrefix': 'Entitätstyp',
   'intelligence.tasks.activeBoardOne': '1 aktives Forum für alle Gespräche',
@@ -4102,7 +4102,7 @@ const messages: TranslationMap = {
   'flows.nodeSummary.agent.withPrompt': '„{prompt}“ · {model}',
   'flows.nodeSummary.agent.default': 'Fragt {model}',
   'flows.nodeSummary.toolCall.runsNative': 'Führt {name} aus',
-  'flows.nodeSummary.toolCall.pickNative': 'Führt ein OpenHuman-Tool aus (eines auswählen)',
+  'flows.nodeSummary.toolCall.pickNative': 'Führt ein 小鹈鹕-Tool aus (eines auswählen)',
   'flows.nodeSummary.toolCall.runs': 'Führt {slug} aus',
   'flows.nodeSummary.toolCall.pick': 'Führt eine App-Aktion aus (eine auswählen)',
   'flows.nodeSummary.http.withUrl': '{method} {url}',
@@ -4427,7 +4427,7 @@ const messages: TranslationMap = {
   'onboarding.contextGathering.title': 'Kontexterfassung',
   'openhuman.team_list_teams': 'Teamlisten-Teams',
   'overlay.ariaAttention': 'Achtung-Nachricht',
-  'overlay.ariaOrb': 'OpenHuman-Overlay',
+  'overlay.ariaOrb': '小鹈鹕-Overlay',
   'overlay.ariaVoiceActive': 'Spracheingabe aktiv',
   'overlay.orbTitle': 'Zum Verschieben ziehen · Doppelklicken, um die Position zurückzusetzen',
   'pages.settings.account.connections': 'Verbindungen',
@@ -4471,7 +4471,7 @@ const messages: TranslationMap = {
   'privacy.whatLeaves.link.label': 'Was verlässt meinen Computer?',
   'rewards.community.achievementsUnlocked': '{unlocked} von {total} Erfolgen freigeschaltet',
   'rewards.community.activityStreakHint':
-    'Aufeinanderfolgende Tage, an denen du auf OpenHuman aktiv warst.',
+    'Aufeinanderfolgende Tage, an denen du auf 小鹈鹕 aktiv warst.',
   'rewards.community.activityTitle': 'Deine Aktivität',
   'rewards.community.claimCredited': '{amount} deinem Guthaben gutgeschrieben',
   'rewards.community.claimError': 'Einlösen fehlgeschlagen. Bitte versuche es erneut.',
@@ -4511,7 +4511,7 @@ const messages: TranslationMap = {
   'rewards.community.roleAssigned': 'Rolle zugewiesen',
   'rewards.community.roleAssignmentCount': '{assigned} von {unlocked} Rollen zugewiesen',
   'rewards.community.roleClaimDesc':
-    'Du hast Discord-Rollen freigeschaltet, bist dem OpenHuman-Server aber noch nicht beigetreten. Tritt bei, damit sie automatisch zugewiesen werden.',
+    'Du hast Discord-Rollen freigeschaltet, bist dem 小鹈鹕-Server aber noch nicht beigetreten. Tritt bei, damit sie automatisch zugewiesen werden.',
   'rewards.community.roleClaimTitle': 'Hol dir deine Discord-Rollen',
   'rewards.community.roleJoinToClaim': 'Server beitreten zum Abholen',
   'rewards.community.rolePending': 'Rolle wird synchronisiert…',
@@ -4591,7 +4591,7 @@ const messages: TranslationMap = {
   'settings.ai.providers.groupCli': 'CLI-Anmeldungen',
   'settings.ai.providers.cliDetail': 'Nutzt eine Anmeldung, die eine andere CLI bereits hat',
   'settings.ai.providers.connected': 'Verbunden',
-  'settings.ai.providers.managedDetail': 'OpenHuman wählt für jede Aufgabe ein Modell',
+  'settings.ai.providers.managedDetail': '小鹈鹕 wählt für jede Aufgabe ein Modell',
   'settings.ai.providers.rowActions': 'Weitere Aktionen für {provider}',
   'settings.ai.providers.replaceKey': 'API-Schlüssel ersetzen',
   'settings.ai.providers.custom': 'Benutzerdefiniert',
@@ -4728,7 +4728,7 @@ const messages: TranslationMap = {
   'settings.ai.noSpendRows': 'Keine Ausgabenzeilen geladen.',
   'settings.ai.topHours': 'Top-Stunden',
   'settings.ai.noHourlySpend': 'Noch keine stündlichen Ausgaben.',
-  'settings.ai.openhumanDefault': 'OpenHuman (Standard)',
+  'settings.ai.openhumanDefault': '小鹈鹕 (Standard)',
   'settings.ai.localModelResolved': 'Ollama · {model}',
   'settings.ai.customRoutingForWorkload': 'Benutzerdefiniertes Routing für {label}',
   'settings.ai.loadingModels': 'Modelle werden geladen...',
@@ -4813,17 +4813,17 @@ const messages: TranslationMap = {
   'settings.ai.composioSyncScans': 'Composio Synchronisierungsscans',
   'settings.ai.totalBackgroundApiReadBudget': 'Gesamtbg API Lesebudget',
   'settings.ai.memoryWorkerPolls': 'Speicher-Worker-Umfragen',
-  'settings.ai.defaultProviderName': 'OpenHuman',
+  'settings.ai.defaultProviderName': '小鹈鹕',
   'settings.ai.routing.managed': 'Verwaltet',
-  'settings.ai.managedSourceLabel': 'Von OpenHuman verwaltet',
+  'settings.ai.managedSourceLabel': 'Von 小鹈鹕 verwaltet',
   'settings.ai.managedSourceDetail': 'Automatische Modellauswahl',
   'settings.ai.routing.managedAlwaysOn': 'Immer aktiv',
   'settings.ai.routing.managedHint':
     'Verwaltet ist immer als Fallback verfügbar. Um dein eigenes Modell zu verwenden, wähle unten einen Routing-Modus.',
   'settings.ai.routing.managedDesc':
-    'OpenHuman führt alle Inferenzen in der Cloud aus, wählt das beste Modell für die Aufgabe aus, optimiert die Kosten und behält die sichersten Routing-Standards bei.',
+    '小鹈鹕 führt alle Inferenzen in der Cloud aus, wählt das beste Modell für die Aufgabe aus, optimiert die Kosten und behält die sichersten Routing-Standards bei.',
   'settings.ai.routing.managedMsg':
-    'OpenHuman verarbeitet alle Rückschlüsse für jede Arbeitsbelastung und wählt automatisch die beste Route für Kosten, Qualität und Sicherheit.',
+    '小鹈鹕 verarbeitet alle Rückschlüsse für jede Arbeitsbelastung und wählt automatisch die beste Route für Kosten, Qualität und Sicherheit.',
   'settings.ai.routing.useYourOwn': 'Verwenden Sie Ihre eigenen Modelle',
   'settings.ai.routing.useYourOwnDesc':
     'Wählen Sie ein Anbieter + Modell und leiten Sie jede Arbeitslast durch. Das ist einfach, aber es kann ineffizient sein, weil leichte und schwere Inferenz alle die gleiche Route teilen.',
@@ -5001,16 +5001,16 @@ const messages: TranslationMap = {
   'settings.composio.confirmSwitch': 'Ich verstehe, zu Direct wechseln',
   'settings.composio.confirmTitle': '⚠️ Wechsel in den Direktmodus',
   'settings.composio.confirmWarning':
-    'Deine vorhandenen Integrationen (Gmail, Slack, GitHub usw., die über OpenHuman verknüpft sind) sind nicht sichtbar – sie befinden sich im von OpenHuman verwalteten Composio-Mandanten.',
+    'Deine vorhandenen Integrationen (Gmail, Slack, GitHub usw., die über 小鹈鹕 verknüpft sind) sind nicht sichtbar – sie befinden sich im von 小鹈鹕 verwalteten Composio-Mandanten.',
   'settings.composio.intro':
     'Composio integriert mehr als 250 externe Apps als Tools, die dein Agent aufrufen kann. Wähle aus, wie diese Werkzeugaufrufe weitergeleitet werden.',
   'settings.composio.title': 'Composio',
   'settings.composio.modeDirect': 'Direkt (bring deinen eigenen API-Schlüssel mit)',
   'settings.composio.modeDirectDesc':
     'Anrufe gehen direkt an backend.composio.dev. Souverän / offlinefreundlich. Die Werkzeugausführung erfolgt synchron; Echtzeit-Trigger-Webhooks werden noch nicht im Direktmodus weitergeleitet (Folgeproblem).',
-  'settings.composio.modeManaged': 'Verwaltet (OpenHuman erledigt das für dich)',
+  'settings.composio.modeManaged': 'Verwaltet (小鹈鹕 erledigt das für dich)',
   'settings.composio.modeManagedDesc':
-    'OpenHuman leitet Tool-Aufrufe über unser Backend weiter (empfohlen). Auth wird vermittelt; du fügst niemals einen Composio API-Schlüssel ein. Webhooks werden vollständig weitergeleitet.',
+    '小鹈鹕 leitet Tool-Aufrufe über unser Backend weiter (empfohlen). Auth wird vermittelt; du fügst niemals einen Composio API-Schlüssel ein. Webhooks werden vollständig weitergeleitet.',
   'settings.composio.routingMode': 'Routing-Modus',
   'settings.composio.saveErrorNoKey':
     'Speichern fehlgeschlagen. Der Direktmodus erfordert einen nicht leeren Schlüssel API.',
@@ -5118,7 +5118,7 @@ const messages: TranslationMap = {
     'Konfiguriere die Authentifizierungsmodi Telegram/Discord und das Standardkanalrouting',
   'settings.developerMenu.tools.title': 'Werkzeuge',
   'settings.developerMenu.tools.desc':
-    'Aktiviere oder deaktiviere Funktionen, die OpenHuman in deinem Namen nutzen kann',
+    'Aktiviere oder deaktiviere Funktionen, die 小鹈鹕 in deinem Namen nutzen kann',
   'settings.developerMenu.devWorkflow.title': 'Entwicklungs-Workflow',
   'settings.developerMenu.devWorkflow.desc':
     'Autonomer Agent, der Ihre GitHub-Probleme auswählt und PRs nach einem Zeitplan einstellt',
@@ -5294,7 +5294,7 @@ const messages: TranslationMap = {
     'Konfiguriere KI-Triage-Einstellungen für Composio-Integrationsauslöser',
   'settings.developerMenu.mcpServer.title': 'MCP-Server',
   'settings.developerMenu.mcpServer.desc':
-    'Konfiguriere externe MCP-Clients für die Verbindung mit OpenHuman',
+    'Konfiguriere externe MCP-Clients für die Verbindung mit 小鹈鹕',
   'settings.developerMenu.autonomy.title': 'Agent-Autonomie',
   'settings.developerMenu.autonomy.desc':
     'Aktionsraten-Limits und Sicherheitsschwellen für Werkzeuge',
@@ -5312,7 +5312,7 @@ const messages: TranslationMap = {
   'settings.mcpServer.copied': 'Kopiert!',
   'settings.mcpServer.openConfigFile': 'Konfigurationsdatei öffnen',
   'settings.mcpServer.binaryPathNotFound':
-    'OpenHuman-Binärdatei nicht gefunden. Wenn du aus dem Quellcode arbeitest, baue sie mit: cargo build --bin openhuman-core',
+    '小鹈鹕-Binärdatei nicht gefunden. Wenn du aus dem Quellcode arbeitest, baue sie mit: cargo build --bin openhuman-core',
   'settings.mcpServer.openConfigError': 'Konfigurationsdatei konnte nicht geöffnet werden',
   'settings.mcpServer.clientClaudeDesktop': 'Claude Desktop',
   'settings.mcpServer.clientCursor': 'Cursor',
@@ -5355,7 +5355,7 @@ const messages: TranslationMap = {
     'Wenn aktiviert, genehmigt der Agent automatisch alle zulässigen Aktionen, ohne vorher deine Zustimmung einzuholen. Dazu gehören Dateischreibvorgänge, Shell-Befehle, Netzwerkanfragen und andere Aktionen mit externen Auswirkungen. Feste Sicherheitssperren (Anmeldeinformationen und Systemverzeichnisse) gelten weiterhin, und Aktionen aus nicht vertrauenswürdigen oder unbekannten Quellen werden nie automatisch genehmigt.',
   'settings.agentAccess.tinyplaceAutopilot.title': 'Autonomer tiny.place-Agent',
   'settings.agentAccess.tinyplaceAutopilot.desc':
-    'Lass OpenHuman eigenständig auf tiny.place handeln: zeitgesteuert sucht es lohnende Arbeit – zuerst offene Bounties –, erledigt Passendes und handelt über deine Identität. Es läuft unbeaufsichtigt und kann Geld ausgeben; nutze beim Testen devnet. Standardmäßig aus.',
+    'Lass 小鹈鹕 eigenständig auf tiny.place handeln: zeitgesteuert sucht es lohnende Arbeit – zuerst offene Bounties –, erledigt Passendes und handelt über deine Identität. Es läuft unbeaufsichtigt und kann Geld ausgeben; nutze beim Testen devnet. Standardmäßig aus.',
   'settings.agentAccess.tinyplaceAutopilot.label': 'Automatisch ausführen',
   'settings.agentAccess.timeout.label': 'Aktions-Timeout',
   'settings.agentAccess.timeout.desc':
@@ -5614,7 +5614,7 @@ const messages: TranslationMap = {
   'settings.mascot.characterPreview': 'Vorschau',
   'settings.mascot.characterStates': 'Staaten',
   'settings.mascot.characterVisemes': 'Mundbilder',
-  'settings.mascot.colorAria': 'OpenHuman Farbe',
+  'settings.mascot.colorAria': '小鹈鹕 Farbe',
   'settings.mascot.colorDesc': 'Farbbeschreibung',
   'settings.mascot.colorHeading': 'Farbüberschrift',
   'settings.mascot.colorBlack': 'Schwarz',
@@ -5624,16 +5624,16 @@ const messages: TranslationMap = {
   'settings.mascot.primaryColor': 'Primär Farbe',
   'settings.mascot.secondaryColor': 'Sekundär',
   'settings.mascot.colorYellow': 'Gelb',
-  'settings.mascot.libraryUnavailable': 'OpenHuman Bibliothek nicht verfügbar',
-  'settings.mascot.title': 'OpenHuman',
-  'settings.mascot.loadingLibrary': 'OpenHuman-Bibliothek wird geladen…',
+  'settings.mascot.libraryUnavailable': '小鹈鹕 Bibliothek nicht verfügbar',
+  'settings.mascot.title': '小鹈鹕',
+  'settings.mascot.loadingLibrary': '小鹈鹕-Bibliothek wird geladen…',
   'settings.mascot.loadDetailError': 'Maskottchen konnte nicht geladen werden.',
   'settings.mascot.loadLibraryError': 'Maskottchenbibliothek konnte nicht geladen werden.',
-  'settings.mascot.localDefault': 'Lokal OpenHuman (Standard)',
+  'settings.mascot.localDefault': 'Lokal 小鹈鹕 (Standard)',
   'settings.mascot.menuTitle': 'Maskottchen',
   'settings.mascot.menuDesc':
     'Wähle die Maskottchenfarbe aus, die in der gesamten App verwendet wird',
-  'settings.mascot.noCharacters': 'Es sind noch keine OpenHuman Zeichen verfügbar',
+  'settings.mascot.noCharacters': 'Es sind noch keine 小鹈鹕 Zeichen verfügbar',
   'settings.mascot.noColorVariants': 'Keine Farbvarianten',
   'settings.mascot.secondaryHeading': 'Meeting-Duo (zweites Maskottchen)',
   'settings.mascot.secondaryDesc':
@@ -5728,7 +5728,7 @@ const messages: TranslationMap = {
     'Sinnvolle Standardeinstellung – gute Kontinuität, ohne bei jedem Lauf zusätzliche Token zu verbrennen.',
   'settings.memoryWindow.balanced.label': 'Ausgewogen',
   'settings.memoryWindow.description':
-    'Wie viel gespeicherter Kontext OpenHuman in jede neue Agentenausführung eingefügt wird. Bei größeren Fenstern ist man sich früherer Gespräche besser bewusst, verbraucht aber bei jedem Durchlauf mehr Token – und kostet mehr.',
+    'Wie viel gespeicherter Kontext 小鹈鹕 in jede neue Agentenausführung eingefügt wird. Bei größeren Fenstern ist man sich früherer Gespräche besser bewusst, verbraucht aber bei jedem Durchlauf mehr Token – und kostet mehr.',
   'settings.memoryWindow.extended.badge': 'Mehr Kontext',
   'settings.memoryWindow.extended.hint':
     'Bei jedem Lauf wird mehr Langzeitgedächtnis injiziert. Höhere Token-Kosten pro Spielzug.',
@@ -5887,21 +5887,21 @@ const messages: TranslationMap = {
   'skills.install.urlLabel': 'Fähigkeit URL',
   'skills.install.urlPlaceholder': 'https://raw.githubusercontent.com/owner/repo/main/SKILL.md',
   'skills.meetingBots.bannerDesc':
-    'Lege einen Google Meet-Link ab und OpenHuman tritt als Gast bei, spricht, hört zu und winkt zurück.',
-  'skills.meetingBots.bannerTitle': 'Sende OpenHuman an eine Besprechung',
-  'skills.meetingBots.busyTitle': 'OpenHuman ist beschäftigt',
+    'Lege einen Google Meet-Link ab und 小鹈鹕 tritt als Gast bei, spricht, hört zu und winkt zurück.',
+  'skills.meetingBots.bannerTitle': 'Sende 小鹈鹕 an eine Besprechung',
+  'skills.meetingBots.busyTitle': '小鹈鹕 ist beschäftigt',
   'skills.meetingBots.comingSoon': 'Kommt bald',
   'skills.meetingBots.couldNotLeaveTitle': 'Meeting konnte nicht verlassen werden',
-  'skills.meetingBots.couldNotStartTitle': 'OpenHuman konnte nicht gestartet werden',
+  'skills.meetingBots.couldNotStartTitle': '小鹈鹕 konnte nicht gestartet werden',
   'skills.meetingBots.displayName': 'Anzeigename',
-  'skills.meetingBots.failedToStart': 'OpenHuman konnte nicht gestartet werden.',
+  'skills.meetingBots.failedToStart': '小鹈鹕 konnte nicht gestartet werden.',
   'skills.meetingBots.joiningMessage': 'Es sollte in wenigen Sekunden als Teilnehmer erscheinen.',
-  'skills.meetingBots.joiningTitle': 'OpenHuman nimmt an der Besprechung teil',
+  'skills.meetingBots.joiningTitle': '小鹈鹕 nimmt an der Besprechung teil',
   'skills.meetingBots.meetingLink': 'Link zum Treffen',
-  'skills.meetingBots.modalAriaLabel': 'Sende OpenHuman an eine Besprechung',
+  'skills.meetingBots.modalAriaLabel': 'Sende 小鹈鹕 an eine Besprechung',
   'skills.meetingBots.modalDesc':
-    'OpenHuman tritt als anonymer Gast bei, streamt sein Video in den Anruf und antwortet über den Agenten.',
-  'skills.meetingBots.modalTitle': 'Sende OpenHuman an eine Besprechung',
+    '小鹈鹕 tritt als anonymer Gast bei, streamt sein Video in den Anruf und antwortet über den Agenten.',
+  'skills.meetingBots.modalTitle': 'Sende 小鹈鹕 an eine Besprechung',
   'skills.meetingBots.newBadge': 'Neu',
   'skills.meetingBots.platformComingSoon': '{label}-Unterstützung ist bald verfügbar.',
   'skills.meetingBots.platformHints.gmeet': 'meet.google.com/abc-defg-hij',
@@ -5914,7 +5914,7 @@ const messages: TranslationMap = {
   'skills.meetingBots.platforms.zoom': 'Zoom',
   'skills.meetingBots.sendTo': 'Senden an',
   'skills.meetingBots.serverOverloaded':
-    'OpenHuman ist gerade stark ausgelastet. Bitte versuche es in ein paar Minuten erneut.',
+    '小鹈鹕 ist gerade stark ausgelastet. Bitte versuche es in ein paar Minuten erneut.',
   'skills.meetingBots.soonSuffix': 'bald',
   'skills.meetingBots.starting': 'Beginnend mit …',
   'skills.meetingBots.recentCallsAriaLabel': 'Letzte Meeting-Anrufe',
@@ -5956,7 +5956,7 @@ const messages: TranslationMap = {
   'skills.meetingBots.respondToParticipantDesc':
     'Geben Sie Ihren genauen Anzeigenamen aus dem Meeting ein. Der Bot antwortet nur, wenn Sie seinen Namen sagen (Wake-Phrase).',
   'skills.meetingBots.wakePhrase': 'Wake-Phrase',
-  'skills.meetingBots.wakePhraseHint': 'Hey OpenHuman',
+  'skills.meetingBots.wakePhraseHint': 'Hey 小鹈鹕',
   'skills.meetingBots.wakePhraseDesc': 'Der Teilnehmer muss dies sagen, bevor der Bot antwortet.',
   'skills.meetingBots.activeMode': 'Antworten, wenn ich es anspreche',
   'skills.meetingBots.activeModeDesc':
@@ -5967,7 +5967,7 @@ const messages: TranslationMap = {
   'skills.meetingBots.history.earlier': 'Früher',
   'skills.meetingBots.history.participantCount': '{count} Teilnehmer',
   'skills.meetingBots.history.participantCountPlural': '{count} Teilnehmer',
-  'skills.meetingBots.history.runWithOpenHuman': 'Mit OpenHuman ausführen',
+  'skills.meetingBots.history.runWith小鹈鹕': 'Mit 小鹈鹕 ausführen',
   'skills.meetingBots.history.searchPlaceholder': 'Anrufe suchen…',
   'skills.meetingBots.history.selectPrompt':
     'Wähle einen Anruf aus, um die Zusammenfassung und das Transkript zu sehen.',
@@ -6011,7 +6011,7 @@ const messages: TranslationMap = {
   'skills.meetingBots.defaults.openDefaults': 'Besprechungsstandards',
   'skills.meetingBots.defaults.watchCalendar': 'Meinen Kalender überwachen',
   'skills.meetingBots.defaults.watchCalendarDesc':
-    'Lassen Sie OpenHuman Ihren verbundenen Kalender überwachen, damit er Meetings automatisch beitreten oder Sie gemäß den folgenden Richtlinien dazu auffordern kann. Dies ist von Meeting-Erinnerungsbenachrichtigungen getrennt.',
+    'Lassen Sie 小鹈鹕 Ihren verbundenen Kalender überwachen, damit er Meetings automatisch beitreten oder Sie gemäß den folgenden Richtlinien dazu auffordern kann. Dies ist von Meeting-Erinnerungsbenachrichtigungen getrennt.',
   'skills.meetingBots.defaults.globalPolicy': 'Globale Auto-Beitrittsrichtlinie',
   'skills.meetingBots.defaults.perPlatformTitle': 'Plattformspezifische Einstellungen',
   'skills.meetingBots.defaults.perPlatformDesc':
@@ -6097,7 +6097,7 @@ const messages: TranslationMap = {
     'Human bündelt deinen persönlichen Kontext, deine Identität und dein Assistentenprofil.',
   'walkthrough.steps.brainTab.title': 'Öffne dein Brain',
   'walkthrough.steps.brainTab.content':
-    'Brain ist der Wissensgraph: Hier prüfst du, was OpenHuman weiß und wie Ideen verbunden sind.',
+    'Brain ist der Wissensgraph: Hier prüfst du, was 小鹈鹕 weiß und wie Ideen verbunden sind.',
   'walkthrough.steps.connectionsTab.title': 'Verbindungen verwalten',
   'walkthrough.steps.connectionsTab.content':
     'Connections ist immer in der Hauptnavigation verfügbar, wenn du Dienste hinzufügen oder anpassen möchtest.',
@@ -6157,7 +6157,7 @@ const messages: TranslationMap = {
   'chat.parentThread': 'übergeordneter Thread',
   'chat.removeReaction': 'Entfernen {emoji}',
   'settings.composio.loading': 'Laden…',
-  'settings.mascot.noCharactersAvailable': 'Es sind noch keine OpenHuman Zeichen verfügbar',
+  'settings.mascot.noCharactersAvailable': 'Es sind noch keine 小鹈鹕 Zeichen verfügbar',
   'skills.uninstall.confirmTitle': '{name} deinstallieren?',
   'conversations.taskKanban.blocked': 'Blockiert',
   'conversations.taskKanban.done': 'Fertig',
@@ -6185,7 +6185,7 @@ const messages: TranslationMap = {
     'Konfiguriere die Authentifizierungsmodi Telegram/Discord und das Standardkanalrouting',
   'devOptions.menuTools': 'Werkzeuge',
   'devOptions.menuToolsDesc':
-    'Aktiviere oder deaktiviere Funktionen, die OpenHuman in deinem Namen nutzen kann',
+    'Aktiviere oder deaktiviere Funktionen, die 小鹈鹕 in deinem Namen nutzen kann',
   'devOptions.menuAgentChat': 'Agenten-Chat',
   'devOptions.menuAgentChatDesc':
     'Test-Agent-Konversation mit Modell- und Temperaturüberschreibungen',
@@ -6539,7 +6539,7 @@ const messages: TranslationMap = {
   'harnessInit.title': 'Einrichtung läuft',
 
   'announcement.gotIt': 'Verstanden',
-  'harnessInit.subtitle': 'OpenHuman bereitet beim ersten Start benötigte Komponenten vor.',
+  'harnessInit.subtitle': '小鹈鹕 bereitet beim ersten Start benötigte Komponenten vor.',
   'harnessInit.stepPython': 'Python-Laufzeitumgebung',
   'harnessInit.stepSpacy': 'Sprachmodell',
   'harnessInit.stepNode': 'Node.js-Laufzeitumgebung',
@@ -6549,16 +6549,16 @@ const messages: TranslationMap = {
   'harnessInit.stateSkipped': 'Übersprungen',
   'harnessInit.stateFailed': 'Fehlgeschlagen',
   'harnessInit.failedMessage':
-    'Einige Einrichtungsschritte wurden nicht abgeschlossen. Du kannst es erneut versuchen oder fortfahren: OpenHuman verwendet dann eine integrierte Ausweichlösung.',
+    'Einige Einrichtungsschritte wurden nicht abgeschlossen. Du kannst es erneut versuchen oder fortfahren: 小鹈鹕 verwendet dann eine integrierte Ausweichlösung.',
   'harnessInit.retry': 'Erneut versuchen',
   'harnessInit.continueAnyway': 'Trotzdem fortfahren',
   'harnessInit.runInBackground': 'Im Hintergrund ausführen',
   'harnessInit.backgroundHint':
-    'Du kannst OpenHuman weiter verwenden, während dies abgeschlossen wird.',
+    'Du kannst 小鹈鹕 weiter verwenden, während dies abgeschlossen wird.',
 
   'keyring.consent.title': 'Sicherer Speicher nicht verfügbar',
   'keyring.consent.description':
-    'Der Schlüsselbund Ihres Betriebssystems ist nicht erreichbar. OpenHuman benötigt Ihre Erlaubnis, Geheimnisse stattdessen in einem lokal verschlüsselten Speicher abzulegen.',
+    'Der Schlüsselbund Ihres Betriebssystems ist nicht erreichbar. 小鹈鹕 benötigt Ihre Erlaubnis, Geheimnisse stattdessen in einem lokal verschlüsselten Speicher abzulegen.',
   'keyring.consent.reasonPrefix': 'Grund:',
   'keyring.consent.showDetails': 'Was bedeutet das?',
   'keyring.consent.hideDetails': 'Details ausblenden',
@@ -6601,7 +6601,7 @@ const messages: TranslationMap = {
   'memory.health.remediation.budget_exhausted':
     'Die Speicher-Embeddings haben das verwaltete Budget erreicht. Richte lokale Ollama-Embeddings ein (Verbindungen → API-Schlüssel → Einbettungen) oder füge deinen eigenen Embeddings-API-Schlüssel hinzu, um den Speicher weiter aufzubauen.',
   'memory.health.remediation.auth_missing':
-    'Keine Embeddings-Anmeldedaten gefunden. Melde dich bei OpenHuman an oder richte lokale Ollama-Embeddings unter Verbindungen → API-Schlüssel → Einbettungen ein.',
+    'Keine Embeddings-Anmeldedaten gefunden. Melde dich bei 小鹈鹕 an oder richte lokale Ollama-Embeddings unter Verbindungen → API-Schlüssel → Einbettungen ein.',
   'memory.health.remediation.auth_invalid':
     'Deine Embeddings-Anmeldedaten wurden abgelehnt. Authentifiziere dich erneut oder wechsle unter Verbindungen → API-Schlüssel → Einbettungen zu lokalen Ollama-Embeddings.',
   'memory.health.remediation.embeddings_unconfigured':
@@ -6617,7 +6617,7 @@ const messages: TranslationMap = {
   'memory.health.remediation.empty_input_refused':
     'Ein Speicherelement wurde übersprungen, weil sein Text leer war. Keine Aktion erforderlich: neue Einträge werden weiterhin normal eingebettet.',
   'memory.health.remediation.storage_unavailable':
-    'OpenHuman kann nicht in seinen Speicher schreiben: die Festplatte oder SD-Karte scheint defekt, voll oder schreibgeschützt zu sein. Überprüfe das Laufwerk und gib Speicherplatz frei; die Speicherverarbeitung wird automatisch fortgesetzt, sobald der Speicher wieder beschreibbar ist.',
+    '小鹈鹕 kann nicht in seinen Speicher schreiben: die Festplatte oder SD-Karte scheint defekt, voll oder schreibgeschützt zu sein. Überprüfe das Laufwerk und gib Speicherplatz frei; die Speicherverarbeitung wird automatisch fortgesetzt, sobald der Speicher wieder beschreibbar ist.',
   'memory.health.remediation.transient':
     'Ein vorübergehender Fehler hat die Speicherverarbeitung unterbrochen. Es wird automatisch erneut versucht.',
   'memory.health.remediation.unknown':
@@ -6699,11 +6699,11 @@ const messages: TranslationMap = {
   'onboarding.custom.vault.subtitle':
     'Bestätigen Sie, wohin Speichernotizen geschrieben werden, wie Quelldaten gelesen werden und ob Ihre Vault-Pipeline fehlerfrei ist.',
   'onboarding.custom.vault.defaultDesc':
-    'Von OpenHuman verwaltete Standardspeichereinstellungen verwenden. Vault-Pfad und Synchronisierungsstatus können später eingesehen werden.',
+    'Von 小鹈鹕 verwaltete Standardspeichereinstellungen verwenden. Vault-Pfad und Synchronisierungsstatus können später eingesehen werden.',
   'onboarding.custom.vault.configureDesc':
     'Vault-Eigentümerschaft prüfen, Integritätsprüfungen durchführen und Speicherkontrollen jetzt anpassen.',
   'onboarding.custom.vault.localDisabledReason':
-    'Die verwaltete Einrichtung erfordert eine OpenHuman-Anmeldung und ist im lokalen Modus nicht verfügbar.',
+    'Die verwaltete Einrichtung erfordert eine 小鹈鹕-Anmeldung und ist im lokalen Modus nicht verfügbar.',
   'onboarding.custom.vault.exitError':
     'Onboarding konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut.',
 
@@ -6726,9 +6726,9 @@ const messages: TranslationMap = {
   'vaultHealth.existsLabel': 'Arbeitsbereich-Vault-Pfad vorhanden',
   'vaultHealth.existsRecovery':
     'Vault-Ordner fehlt. Starten Sie eine Synchronisierung oder erstellen Sie diesen Ordner und aktualisieren Sie dann diese Prüfliste.',
-  'vaultHealth.writableLabel': 'Vault ist durch OpenHuman beschreibbar',
+  'vaultHealth.writableLabel': 'Vault ist durch 小鹈鹕 beschreibbar',
   'vaultHealth.writableRecovery':
-    'OpenHuman kann noch nicht in diesen Vault schreiben. Schreibberechtigungen erteilen und aktualisieren.',
+    '小鹈鹕 kann noch nicht in diesen Vault schreiben. Schreibberechtigungen erteilen und aktualisieren.',
   'vaultHealth.obsidianLabel': 'Vault ist in Obsidian registriert',
   'vaultHealth.obsidianRecovery':
     'Wählen Sie in Obsidian „Ordner als Vault öffnen" für diesen Pfad und aktualisieren Sie dann diese Prüfliste.',
@@ -6746,13 +6746,13 @@ const messages: TranslationMap = {
   'memoryData.howItWorks': 'So funktioniert die Speicherablage',
   'memoryData.workspaceVault': 'Arbeitsbereich-Vault · Schreiben',
   'memoryData.workspaceVaultDesc':
-    'OpenHuman schreibt generierte Speichernotizen nach memory_tree/content.',
+    '小鹈鹕 schreibt generierte Speichernotizen nach memory_tree/content.',
   'memoryData.connectedSources': 'Verbundene Quellen · Lesen',
   'memoryData.connectedSourcesDesc':
     'Ordner, Postfächer, Chats und Repositories werden für die Speicherindizierung importiert – die Originaldateien werden dabei nie überschrieben.',
   'memoryData.internalFiles': 'Interne Memory-Tree-Dateien',
   'memoryData.internalFilesDesc':
-    'Indizes, Warteschlangenstatus und Zusammenfassungen werden von OpenHuman verwaltet, um Erinnerung und Synchronisierung fehlerfrei zu halten.',
+    'Indizes, Warteschlangenstatus und Zusammenfassungen werden von 小鹈鹕 verwaltet, um Erinnerung und Synchronisierung fehlerfrei zu halten.',
   'memoryData.windowError': 'Speicherfenster',
   'memoryData.windowUpdated': 'Speicherfenster aktualisiert',
   'memoryData.windowUpdatedMsg': 'Auf {window} gesetzt.',
@@ -7021,7 +7021,7 @@ const messages: TranslationMap = {
   // Gateways: cores this app provisions and runs elsewhere.
   'settings.gateway.title': 'Den Kern woanders ausführen',
   'settings.gateway.description':
-    'Der Kern kann in einem Container laufen, auf einem anderen Rechner über SSH oder in einem Container auf einem anderen Rechner. OpenHuman startet ihn, verbindet sich und fährt ihn herunter, sobald du wechselst.',
+    'Der Kern kann in einem Container laufen, auf einem anderen Rechner über SSH oder in einem Container auf einem anderen Rechner. 小鹈鹕 startet ihn, verbindet sich und fährt ihn herunter, sobald du wechselst.',
   'settings.gateway.add': 'Ort hinzufügen',
   'settings.gateway.save': 'Ort speichern',
   'settings.gateway.remove': 'Entfernen',

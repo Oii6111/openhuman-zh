@@ -24,6 +24,7 @@ const ICON_COMPONENTS: Record<string, (props: { className?: string }) => ReactEl
 const ICON_EMOJI: Record<string, string> = {
   telegram: '✈️',
   discord: '🎮',
+  wechat: '💬',
   web: '🌐',
   mcp: '🔌',
   email: '✉️',

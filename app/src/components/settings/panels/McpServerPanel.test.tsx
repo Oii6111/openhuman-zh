@@ -200,7 +200,7 @@ describe('McpServerPanel — binary path error', () => {
     renderWithProviders(<Panel />);
 
     await waitFor(() => {
-      expect(screen.getByText(/OpenHuman binary not found/i)).toBeInTheDocument();
+      expect(screen.getByText(/小鹈鹕 binary not found/i)).toBeInTheDocument();
     });
   });
 });

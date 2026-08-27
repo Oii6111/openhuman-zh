@@ -53,12 +53,12 @@ pub use schema::{
     SearchEngineCredentials, SearxngConfig, SecretsConfig, SecurityConfig, ShellConfig,
     SlackConfig, StorageConfig, StorageProviderConfig, StorageProviderSection, StreamMode,
     SttEngine, TeamModelConfig, TelegramConfig, TokenjuiceConfig, UpdateConfig,
-    UpdateRestartStrategy, VoiceActivationMode, VoiceServerConfig, WebSearchConfig, WebhookConfig,
-    YuanbaoConfig, DEFAULT_CLOUD_LLM_MODEL, DEFAULT_MEMORY_SYNC_INTERVAL_SECS, DEFAULT_MODEL,
-    MEMORY_SYNC_INTERVAL_PRESETS_SECS, MODEL_AGENTIC_V1, MODEL_BURST_V1, MODEL_CHAT_V1,
-    MODEL_CODING_V1, MODEL_REASONING_QUICK_V1, MODEL_REASONING_V1, MODEL_SUMMARIZATION_V1,
-    MODEL_VISION_V1, SEARCH_ENGINE_BRAVE, SEARCH_ENGINE_DISABLED, SEARCH_ENGINE_EXA,
-    SEARCH_ENGINE_MANAGED, SEARCH_ENGINE_PARALLEL, SEARCH_ENGINE_QUERIT,
+    UpdateRestartStrategy, VoiceActivationMode, VoiceServerConfig, WeChatConfig, WebSearchConfig,
+    WebhookConfig, YuanbaoConfig, DEFAULT_CLOUD_LLM_MODEL, DEFAULT_MEMORY_SYNC_INTERVAL_SECS,
+    DEFAULT_MODEL, MEMORY_SYNC_INTERVAL_PRESETS_SECS, MODEL_AGENTIC_V1, MODEL_BURST_V1,
+    MODEL_CHAT_V1, MODEL_CODING_V1, MODEL_REASONING_QUICK_V1, MODEL_REASONING_V1,
+    MODEL_SUMMARIZATION_V1, MODEL_VISION_V1, SEARCH_ENGINE_BRAVE, SEARCH_ENGINE_DISABLED,
+    SEARCH_ENGINE_EXA, SEARCH_ENGINE_MANAGED, SEARCH_ENGINE_PARALLEL, SEARCH_ENGINE_QUERIT,
 };
 // Kept as a separate re-export (issue #4117) so the large alphabetized group
 // above stays byte-identical and rustfmt-stable.
@@ -120,8 +120,14 @@ mod tests {
             port: None,
         };
 
+        let wechat = WeChatConfig {
+            bot_token: "wechat-token".into(),
+            ..WeChatConfig::default()
+        };
+
         assert_eq!(telegram.allowed_users.len(), 1);
         assert_eq!(discord.guild_id.as_deref(), Some("123"));
         assert_eq!(lark.app_id, "app-id");
+        assert_eq!(wechat.base_url, "https://ilinkai.weixin.qq.com");
     }
 }
